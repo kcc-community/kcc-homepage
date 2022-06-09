@@ -1,0 +1,345 @@
+.bridge-loading-wrap {
+  background: transparent;
+  width: 500px;
+  height: 500px;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 80px;
+  z-index: 999 !important;
+  transform: translate3D(0, 0, 0) scale(0.2, 0.2);
+  transform-origin: 50% 0%;
+}
+
+.box {
+  left: 0px;
+  top: 0px;
+  width: 500px;
+  height: 500px;
+  transform-style: preserve-3d;
+  transform: translate3D(0, 0, 0px) rotate(0deg) scale(1, 1);
+  opacity: 1;
+  transform-origin: 50% 50%;
+  display: block;
+  position: absolute;
+}
+
+.BX_BG1 {
+  background: transparent;
+}
+
+.animation1 {
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: BX_AniKey1 1.96s steps(1) 0s 1 normal none;
+}
+
+@keyframes BX_AniKey1 {
+  /* 		This layer has no animations to export */
+}
+
+.sprite-success {
+  background-image: url('../../assets/images/bridge/sprite1.png');
+  width: 100%;
+  height: 100%;
+  animation: BX_SprAniKey1 1.96s steps(1) 0s 1 normal none;
+}
+
+.sprite-loading {
+  background-image: url('../../assets/images/bridge/sprite1.png');
+  width: 100%;
+  height: 100%;
+  animation: BX_SprAniKey2 1s steps(1) 0s infinite normal none;
+}
+
+.sprite-done {
+  background-image: url('../../assets/images/bridge/sprite1.png');
+  width: 100%;
+  height: 100%;
+  background-position: -3500px -2500px;
+}
+
+@keyframes BX_SprAniKey2 {
+  0% {
+    background-position: 0px 0px;
+  }
+
+  5% {
+    background-position: -500px 0px;
+  }
+
+  10% {
+    background-position: -1000px 0px;
+  }
+
+  15% {
+    background-position: -1500px 0px;
+  }
+
+  20% {
+    background-position: -2000px 0px;
+  }
+
+  25% {
+    background-position: -2500px 0px;
+  }
+
+  30% {
+    background-position: -3000px 0px;
+  }
+
+  35% {
+    background-position: -3500px 0px;
+  }
+
+  40% {
+    background-position: 0px -500px;
+  }
+
+  45% {
+    background-position: -500px -500px;
+  }
+
+  50% {
+    background-position: -1000px -500px;
+  }
+
+  55% {
+    background-position: -1500px -500px;
+  }
+
+  60% {
+    background-position: -2000px -500px;
+  }
+
+  65% {
+    background-position: -2500px -500px;
+  }
+
+  70% {
+    background-position: -3000px -500px;
+  }
+
+  75% {
+    background-position: -3500px -500px;
+  }
+
+  80% {
+    background-position: 0px -1000px;
+  }
+  85% {
+    background-position: -500px -1000px;
+  }
+
+  90% {
+    background-position: -1000px -1000px;
+  }
+
+  95% {
+    background-position: -1500px -1000px;
+  }
+
+  98% {
+    background-position: -2000px -1000px;
+  }
+  100% {
+    background-position: -2500px -1000px;
+  }
+}
+
+@keyframes BX_SprAniKey1 {
+  0% {
+    background-position: 0px 0px;
+  }
+
+  2.04% {
+    background-position: -500px 0px;
+  }
+
+  4.08% {
+    background-position: -1000px 0px;
+  }
+
+  6.12% {
+    background-position: -1500px 0px;
+  }
+
+  8.16% {
+    background-position: -2000px 0px;
+  }
+
+  10.20% {
+    background-position: -2500px 0px;
+  }
+
+  12.24% {
+    background-position: -3000px 0px;
+  }
+
+  14.29% {
+    background-position: -3500px 0px;
+  }
+
+  16.33% {
+    background-position: 0px -500px;
+  }
+
+  18.37% {
+    background-position: -500px -500px;
+  }
+
+  20.41% {
+    background-position: -1000px -500px;
+  }
+
+  22.45% {
+    background-position: -1500px -500px;
+  }
+
+  24.49% {
+    background-position: -2000px -500px;
+  }
+
+  26.53% {
+    background-position: -2500px -500px;
+  }
+
+  28.57% {
+    background-position: -3000px -500px;
+  }
+
+  30.61% {
+    background-position: -3500px -500px;
+  }
+
+  32.65% {
+    background-position: 0px -1000px;
+  }
+
+  34.69% {
+    background-position: -500px -1000px;
+  }
+
+  36.73% {
+    background-position: -1000px -1000px;
+  }
+
+  38.78% {
+    background-position: -1500px -1000px;
+  }
+
+  40.82% {
+    background-position: -2000px -1000px;
+  }
+
+  42.86% {
+    background-position: -2500px -1000px;
+  }
+
+  44.90% {
+    background-position: -3000px -1000px;
+  }
+
+  46.94% {
+    background-position: -3500px -1000px;
+  }
+
+  48.98% {
+    background-position: 0px -1500px;
+  }
+
+  51.02% {
+    background-position: -500px -1500px;
+  }
+
+  53.06% {
+    background-position: -1000px -1500px;
+  }
+
+  55.10% {
+    background-position: -1500px -1500px;
+  }
+
+  57.14% {
+    background-position: -2000px -1500px;
+  }
+
+  59.18% {
+    background-position: -2500px -1500px;
+  }
+
+  61.22% {
+    background-position: -3000px -1500px;
+  }
+
+  63.27% {
+    background-position: -3500px -1500px;
+  }
+
+  65.31% {
+    background-position: 0px -2000px;
+  }
+
+  67.35% {
+    background-position: -500px -2000px;
+  }
+
+  69.39% {
+    background-position: -1000px -2000px;
+  }
+
+  71.43% {
+    background-position: -1500px -2000px;
+  }
+
+  73.47% {
+    background-position: -2000px -2000px;
+  }
+
+  75.51% {
+    background-position: -2500px -2000px;
+  }
+
+  77.55% {
+    background-position: -3000px -2000px;
+  }
+
+  79.59% {
+    background-position: -3500px -2000px;
+  }
+
+  81.63% {
+    background-position: 0px -2500px;
+  }
+
+  83.67% {
+    background-position: -500px -2500px;
+  }
+
+  85.71% {
+    background-position: -1000px -2500px;
+  }
+
+  87.76% {
+    background-position: -1500px -2500px;
+  }
+
+  89.80% {
+    background-position: -2000px -2500px;
+  }
+
+  91.84% {
+    background-position: -2500px -2500px;
+  }
+
+  93.88% {
+    background-position: -3000px -2500px;
+  }
+
+  95.92% {
+    background-position: -3500px -2500px;
+  }
+
+  97.96% {
+    background-position: 0px -3000px;
+  }
+}
