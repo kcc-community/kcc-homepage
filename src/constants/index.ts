@@ -112,7 +112,7 @@ export const KCC = {
     },
     {
       date: 'Coming Soon',
-      title: 'Incubating Most Valued Projects in Unicorn',
+      title: '',
     },
   ],
   PARTNER_LIST: [
