@@ -20,12 +20,12 @@ const AppFooterWrap = styled.div`
   flex-flow: column wrap;
   justify-content: flex-start;
   align-items: center;
-  height: 320px;
+  height: 360px;
   background: #000;
   @media (max-width: 768px) {
     width: 100%;
     height: auto;
-    tex-align: center;
+    text-align: center;
   }
   @media (max-width: 1200px) and (min-width: 769px) {
     height: auto;
