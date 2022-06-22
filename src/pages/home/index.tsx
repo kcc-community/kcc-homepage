@@ -207,8 +207,8 @@ const PartnerListWrap = styled.div`
     padding-top: 30px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
   }
 `
 const PartnerItemWrap = styled.div`
@@ -541,7 +541,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
     }
   `
 
-  const TwoLine = require('../../assets/images/home/threeline.svg').default
+  const TwoLine = require('../../assets/images/home/four-line.png').default
 
   const MileStoneWrap = styled(CenterRow)`
     width: 100%;
@@ -550,10 +550,10 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
     margin: 60px 0px 60px 0px;
     padding: 0px 60px;
     position: relative;
-    margin-bottom: 140px;
-    height: 620px;
-    background: url(${TwoLine}) 0px -36px no-repeat;
-    background-size: 99% 100%;
+    margin-bottom: 60px;
+    height: 920px;
+    background: url(${TwoLine}) 0px 20px no-repeat;
+    background-size: 100% 85%;
     overflow: hidden;
     @media (max-width: 768px) {
       flex-flow: column nowrap;
@@ -576,7 +576,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
     top: -3px;
   `
   const ReverseOrder = styled.div`
-    margin: 132px 0 136px 0;
+    margin: 136px 0 146px 0;
     display: flex;
     width: 100%;
     max-width: 1000px;
@@ -883,7 +883,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
                     transform: 'rotate(90deg)',
                     transformOrigin: 'top left',
                     zIndex: 3,
-                    width: '960px',
+                    width: '1200px',
                     left: '40px',
                     top: '0px',
                   }}

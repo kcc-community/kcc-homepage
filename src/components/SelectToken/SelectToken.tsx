@@ -108,6 +108,7 @@ const ListWrap = styled.div`
   height: 450px;
   overflow-y: auto;
 `
+
 const SelectItem = styled(TokenWrap)`
   padding: 0 5px 0 5px;
   border-radius: 4px;

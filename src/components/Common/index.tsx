@@ -37,6 +37,7 @@ export const TitleText = styled.span`
     font-weight: 500;
     line-height: 36px;
     text-align: left;
+    margin-top: 20px;
   }
 `
 export const ParagraphText = styled.div`

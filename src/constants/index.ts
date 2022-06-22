@@ -101,6 +101,16 @@ export const KCC = {
       icon: require('../assets/images/home/milestone-icon@2x.png').default,
     },
     {
+      date: '2022-06-16',
+      title: 'KCC Validator Election Launched',
+      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+    },
+    {
+      date: '2022-06-24',
+      title: 'KCC Mainnet Ishikari Hardfork Upgrade',
+      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+    },
+    {
       date: 'Coming Soon',
       title: 'Incubating Most Valued Projects in Unicorn',
     },
