@@ -21,6 +21,10 @@ export const FOOTER_LIST = [
         navText: 'Disclaimers',
         navRoute: KCC.DISCLAIMER,
       },
+      {
+        navText: 'News',
+        navRoute: 'https://news.kcc.io',
+      },
     ],
   },
   {

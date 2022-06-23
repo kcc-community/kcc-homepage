@@ -204,8 +204,8 @@ export const MENU_LIST = [
     hasChildren: false,
   },
   {
-    name: null,
-    route: 'https://kcc.io/unicorn',
+    name: 'News',
+    route: 'https://news.kcc.io',
     hasChildren: false,
   },
 ]
