@@ -22,6 +22,7 @@ export const KCC = {
   DISCOVER: 'https://discover.kcc.io',
   DAO: 'https://godao.community',
   SAFE_GNOSIS: 'https://safe.kcc.io',
+  STAKING: 'https://skcs.io',
   CONTACT_LIST: [
     {
       app: 'Twitter',

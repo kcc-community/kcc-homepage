@@ -1,6 +1,6 @@
 import { KCC } from './index'
+import NodeStakingLink from '../components/NodeStakingLink'
 
-import UnicornLink from '../components/UnicornLink'
 export interface NavItemType {
   name: any
   hasChildren?: boolean
@@ -111,6 +111,12 @@ export const MENU_LIST = [
           //   icon: require('../assets/images/Icons/menu/chrome@2x.png').default,
           // },
           {
+            title: 'KCC BRIDGE TITLE',
+            subTitle: 'KCC BRIDGE DESC',
+            route: '/bridge/transfer',
+            icon: require('../assets/images/Icons/menu/bridge.png').default,
+          },
+          {
             title: 'Gnosis Safe Multisig',
             subTitle: 'Protect asset security',
             route: KCC.SAFE_GNOSIS,
@@ -181,10 +187,10 @@ export const MENU_LIST = [
     ],
   },
   {
-    name: 'KCC BRIDGE TITLE',
-    subTitle: 'KCC BRIDGE DESC',
-    route: '/bridge/transfer',
-    icon: require('../assets/images/Icons/menu/bridge.png').default,
+    name: NodeStakingLink,
+    subTitle: '',
+    route: KCC.STAKING,
+    icon: require('../assets/images/Icons/menu/chrome@2x.png').default,
     hasChildren: false,
   },
   {

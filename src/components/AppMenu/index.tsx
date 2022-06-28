@@ -1,24 +1,24 @@
-import React, { CSSProperties } from 'react'
-import styled from 'styled-components'
-import { NavItemType, NavItemChildrenType, NavItemGroupType, MENU_LIST } from '../../constants/menuList'
-import { NavLink, useHistory } from 'react-router-dom'
 import { DownOutlined } from '@ant-design/icons'
+import React, { CSSProperties } from 'react'
 import { useTranslation } from 'react-i18next'
+import { NavLink, useHistory } from 'react-router-dom'
+import styled from 'styled-components'
+import { MENU_LIST, NavItemChildrenType, NavItemGroupType, NavItemType } from '../../constants/menuList'
 
-import Row from '../Row/index'
-import Column from '../Column'
-import { RowBetween } from '../Row/index'
 import { Menu } from 'antd'
+import Column from '../Column'
+import Row, { RowBetween } from '../Row/index'
 
+import { useDispatch } from 'react-redux'
+import { KCC } from '../../constants/index'
 import { theme } from '../../constants/theme'
+import { changeMobileMenuShow } from '../../state/application/actions'
 import { useResponsive } from '../../utils/responsive'
 import { BrowserView, MobileView } from '../Common'
-import { useDispatch } from 'react-redux'
-import { changeMobileMenuShow } from '../../state/application/actions'
-import { KCC } from '../../constants/index'
 
-import './index.less'
 import UnicornLink from '../UnicornLink'
+import './index.less'
+import NodeStakingLink from '../NodeStakingLink'
 
 export interface AppMenuProps {
   style?: CSSProperties
@@ -191,7 +191,7 @@ const AppMenu: React.FunctionComponent<AppMenuProps> = ({ style }) => {
               <NavTitle style={{ position: 'relative', top: '-2px' }}>{t(`${navItem.name}`)}</NavTitle>
             </NavLink>
           ) : (
-            <UnicornLink />
+            <NodeStakingLink />
           )}
         </Menu.Item>
       )
