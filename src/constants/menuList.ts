@@ -201,6 +201,11 @@ export const MENU_LIST = [
     hasChildren: false,
   },
   {
+    name: 'News',
+    route: 'https://news.kcc.io',
+    hasChildren: false,
+  },
+  {
     name: 'Activites',
     subTitle: 'View the exciting activites information, Includes hackathons,meetups,and more',
     route: '/community/activity',
@@ -209,9 +214,5 @@ export const MENU_LIST = [
     icon: require('../assets/images/Icons/menu/activity@2x.png').default,
     hasChildren: false,
   },
-  {
-    name: 'News',
-    route: 'https://news.kcc.io',
-    hasChildren: false,
-  },
+
 ]
