@@ -137,6 +137,7 @@ const contactList = [
       { language: 'Spanish', url: 'https://t.me/KCCOfficialSpanishCommunity' },
       { language: 'Arabic', url: 'https://t.me/KCCOfficialArabicCommunity' },
       { language: 'Chinese', url: 'https://t.me/KCCOfficialChineseCommunity' },
+      { language: 'Portuguese', url: 'https://t.me/KCCOfficialBrazil' },
     ],
   },
   {
