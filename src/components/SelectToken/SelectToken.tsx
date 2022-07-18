@@ -175,7 +175,7 @@ const SelectToken: React.FunctionComponent<SelectTokenProps> = ({ list, currency
       >
         <SelectItem>
           <TokenWrap>
-            <TokenIcon src={`/token/${token?.symbol.toLowerCase()}.png`} />
+            <TokenIcon src={`https://static.kcc.network/bridge/${token?.symbol.toLowerCase()}.png`} />
             <TokenDescriptionWrap>
               <TokenName>{token?.symbol.toUpperCase()}</TokenName>
               <FullName>{token.name ?? token.symbol}</FullName>
@@ -197,7 +197,7 @@ const SelectToken: React.FunctionComponent<SelectTokenProps> = ({ list, currency
             setShow(() => true)
           }}
         >
-          <TokenIcon src={`/token/${currency?.symbol.toLowerCase()}.png`} />
+          <TokenIcon src={`https://static.kcc.network/bridge/${currency?.symbol.toLowerCase()}.png`} />
           <TokenText>{currency?.symbol.toUpperCase()}</TokenText>
         </TokenWrap>
         <RightOutlined style={{ fontSize: '10px', color: '#01081e' }} />
