@@ -645,7 +645,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
                   </div>
                 )}
               </MilestoneIconWrap>
-              <MilestoneDateText style={{ marginTop: '10px' }}>{milestore.date}</MilestoneDateText>
+              <MilestoneDateText style={{ marginTop: '10px' }}>{t(milestore.date)}</MilestoneDateText>
               <MilestoneTitle>{t(`${milestore.title}`)}</MilestoneTitle>
             </Row>
           )

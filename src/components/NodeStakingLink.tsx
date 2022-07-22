@@ -34,7 +34,11 @@ const Image = styled.img`
   height: 16px;
 `
 
-const NodeStakingLink = () => {
+type Props = {
+  title: string
+}
+
+const NodeStakingLink: React.FunctionComponent<Props> = ({ title }) => {
   const history = useHistory()
   const { t } = useTranslation()
   const dispatch = useDispatch()
@@ -49,7 +53,7 @@ const NodeStakingLink = () => {
           }
         }}
       >
-        {t('Node Staking')}
+        {t(title)}
       </Link>
       <Image src={require('../assets/images/home/hot.png').default} />
     </UnicornWrap>

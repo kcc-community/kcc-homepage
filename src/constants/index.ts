@@ -101,6 +101,11 @@ export const KCC = {
       title: 'First Hackathon Kicked Off',
       icon: require('../assets/images/home/milestone-icon@2x.png').default,
     },
+     {
+      date: '2022-03-29',
+      title: 'Co-release KCS Whitepaper',
+      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+    },
     {
       date: '2022-06-16',
       title: 'KCC Validator Election Launched',
@@ -112,7 +117,7 @@ export const KCC = {
       icon: require('../assets/images/home/milestone-icon@2x.png').default,
     },
     {
-      date: 'Coming Soon',
+      date: 'Coming Soon...',
       title: '',
     },
   ],

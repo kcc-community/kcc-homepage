@@ -191,7 +191,7 @@ const AppMenu: React.FunctionComponent<AppMenuProps> = ({ style }) => {
               <NavTitle style={{ position: 'relative', top: '-2px' }}>{t(`${navItem.name}`)}</NavTitle>
             </NavLink>
           ) : (
-            <NodeStakingLink />
+            navItem.name
           )}
         </Menu.Item>
       )
