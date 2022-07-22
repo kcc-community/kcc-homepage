@@ -36,9 +36,10 @@ const Image = styled.img`
 
 type Props = {
   title: string
+  link: string
 }
 
-const NodeStakingLink: React.FunctionComponent<Props> = ({ title }) => {
+const NodeStakingLink: React.FunctionComponent<Props> = ({ title, link }) => {
   const history = useHistory()
   const { t } = useTranslation()
   const dispatch = useDispatch()
@@ -47,7 +48,7 @@ const NodeStakingLink: React.FunctionComponent<Props> = ({ title }) => {
     <UnicornWrap>
       <Link
         onClick={() => {
-          window.open(KCC.STAKING, '_blank')
+          window.open(link, '_blank')
           if (isMobile) {
             dispatch(changeMobileMenuShow({ show: false }))
           }
