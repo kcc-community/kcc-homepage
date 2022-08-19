@@ -101,7 +101,7 @@ export const KCC = {
       title: 'First Hackathon Kicked Off',
       icon: require('../assets/images/home/milestone-icon@2x.png').default,
     },
-     {
+    {
       date: '2022-03-29',
       title: 'Co-release KCS Whitepaper',
       icon: require('../assets/images/home/milestone-icon@2x.png').default,
@@ -183,10 +183,41 @@ export const KCC = {
       logo: require('../assets/images/home/blog.png').default,
       route: 'https://blogtienao.com/',
     },
+    // {
+    //   name: 'nest',
+    //   logo: require('../assets/images/home/nest.png').default,
+    //   route: 'https://www.nestprotocol.org',
+    // },
+
     {
-      name: 'nest',
-      logo: require('../assets/images/home/nest.png').default,
-      route: 'https://www.nestprotocol.org',
+      name: 'Sharding Capital',
+      logo: require('../assets/images/home/sharding.png').default,
+      route: 'https://www.sharding.capital/',
+    },
+    {
+      name: 'Shima Capital',
+      logo: require('../assets/images/home/shima.png').default,
+      route: 'https://shima.capital/',
+    },
+    {
+      name: 'Zonff',
+      logo: require('../assets/images/home/zonff.png').default,
+      route: 'https://www.zonff.partners/#/home',
+    },
+    {
+      name: 'Axis Ventures',
+      logo: require('../assets/images/home/Axis.png').default,
+      route: 'https://www.axis.ventures/',
+    },
+    {
+      name: 'AC Capital',
+      logo: require('../assets/images/home/ac.png').default,
+      route: 'https://www.accapital.io/',
+    },
+    {
+      name: 'Web3Port',
+      logo: require('../assets/images/home/web3.png').default,
+      route: 'https://www.web3port.us/',
     },
   ],
 }
