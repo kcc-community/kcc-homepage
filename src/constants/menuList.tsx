@@ -187,7 +187,14 @@ export const MENU_LIST = [
     ],
   },
   {
-    name: <NodeStakingLink title="Node Staking" link={KCC.STAKING} />,
+    name: <NodeStakingLink title="Beowulf" link="https://beowulf.kcc.io/" />,
+    subTitle: '',
+    route: KCC.STAKING,
+    icon: require('../assets/images/Icons/menu/chrome@2x.png').default,
+    hasChildren: false,
+  },
+  {
+    name: 'Node Staking',
     subTitle: '',
     route: KCC.STAKING,
     icon: require('../assets/images/Icons/menu/chrome@2x.png').default,
@@ -201,7 +208,7 @@ export const MENU_LIST = [
     hasChildren: false,
   },
   {
-    name: <NodeStakingLink title="News" link="https://news.kcc.io" />,
+    name: 'News',
     route: 'https://news.kcc.io',
     hasChildren: false,
   },
