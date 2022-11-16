@@ -16,10 +16,10 @@ const Activity = lazy(() => import(/* webpackChunkName:'Activity' */ './pages/ac
 const Bridge = lazy(() => import(/* webpackChunkName:'Bridge' */ './pages/bridge/index'))
 const Ambassador = lazy(() => import(/* webpackChunkName:'Ambassador' */ './pages/ambassador/index'))
 const Unicorn = lazy(() => import(/* webpackChunkName:'Unicorn' */ './pages/uniccorn/index'))
+import Proof from './pages/proof'
 
 import { clearConfirmAndOutdateOrder } from './utils/task'
 
-import './App.less'
 
 function RouteWithSubRoutes(route: { path: string; component: any; routes: any }) {
   return (
@@ -79,6 +79,7 @@ export default function App() {
             <Route path="/" exact={true} component={Home} />
             <Route path="/community/grants" exact={true} component={Grants} />
             <Route path="/community/activity" exact={true} component={Activity} />
+            <Route path="/proof-of-assets" exact={true} component={Proof} />
             <Route path="/ambassador" exact={true} component={Ambassador} />
             <Route path="/unicorn" exact={true} component={Unicorn} />
             {routes.map((route, i) => (

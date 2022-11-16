@@ -1,15 +1,15 @@
 import React from 'react'
-import styled from 'styled-components'
-import Row from '../Row'
-import Column from '../Column/index'
 import { useTranslation } from 'react-i18next'
-import { RowBetween, CenterRow } from '../Row/index'
-import { FOOTER_LIST } from '../../constants/footerList'
-import KccLogo from '../Logo/KccLogo'
 import { useHistory } from 'react-router'
-import { BrowserView, MobileView } from '../Common'
-import MFooter from './MFooter'
+import styled from 'styled-components'
 import { KCC } from '../../constants'
+import { FOOTER_LIST } from '../../constants/footerList'
+import Column from '../Column/index'
+import { BrowserView, MobileView } from '../Common'
+import KccLogo from '../Logo/KccLogo'
+import Row from '../Row'
+import { CenterRow, RowBetween } from '../Row/index'
+import MFooter from './MFooter'
 
 export interface AppFooterProps {}
 
@@ -20,8 +20,9 @@ const AppFooterWrap = styled.div`
   flex-flow: column wrap;
   justify-content: flex-start;
   align-items: center;
-  height: 360px;
+  height: auto;
   background: #000;
+  box-sizing: border-box;
   @media (max-width: 768px) {
     width: 100%;
     height: auto;

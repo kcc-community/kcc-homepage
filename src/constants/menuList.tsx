@@ -186,13 +186,13 @@ export const MENU_LIST = [
       },
     ],
   },
-  {
-    name: <NodeStakingLink title="Beowulf" link="https://beowulf.kcc.io/" />,
-    subTitle: '',
-    route: KCC.STAKING,
-    icon: require('../assets/images/Icons/menu/chrome@2x.png').default,
-    hasChildren: false,
-  },
+  // {
+  //   name: <NodeStakingLink title="Beowulf" link="https://beowulf.kcc.io/" />,
+  //   subTitle: '',
+  //   route: KCC.STAKING,
+  //   icon: require('../assets/images/Icons/menu/chrome@2x.png').default,
+  //   hasChildren: false,
+  // },
   {
     name: 'Node Staking',
     subTitle: '',

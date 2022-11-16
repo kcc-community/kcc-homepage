@@ -50,6 +50,10 @@ export const FOOTER_LIST = [
         navText: 'Testnet faucet',
         navRoute: KCC.FAUCET,
       },
+      {
+        navText: 'Proof of assets',
+        navRoute: '/proof-of-assets',
+      },
     ],
   },
   {
@@ -73,15 +77,15 @@ export const FOOTER_LIST = [
       },
     ],
   },
-  {
-    title: 'Event',
-    children: [
-      {
-        navText: 'Unicorn Contest',
-        navRoute: '/unicorn',
-      },
-    ],
-  },
+  // {
+  //   title: 'Event',
+  //   children: [
+  //     {
+  //       navText: 'Unicorn Contest',
+  //       navRoute: '/unicorn',
+  //     },
+  //   ],
+  // },
   {
     title: 'Contact Us',
     children: [
