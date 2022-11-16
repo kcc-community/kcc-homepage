@@ -1,5 +1,4 @@
 export const NetworkContextName = 'NETWORK'
-export const OppositeNetworkName = 'OPPSITE'
 export const connectorLocalStorageKey = 'connectorId'
 
 export enum ConnectorNames {

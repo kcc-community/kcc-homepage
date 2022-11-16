@@ -1,40 +1,40 @@
-import React from 'react'
-import styled from 'styled-components'
-import { useTranslation } from 'react-i18next'
-import { Input, notification, Tooltip } from 'antd'
-import SelectToken from '../../components/SelectToken/SelectToken'
-import ChainBridge, { Box } from '../../components/ChainBridge'
-import AmountInput, { ErrorText, TextWrap } from '../../components/AmountInput'
-import Row from '../../components/Row'
-import { useWeb3React } from '@web3-react/core'
-import TransferButton from '../../components/TransferButton'
-import { ChainBridgeType, MoreInfo } from './confirm'
-import TransferLimit from '../../components/TransferLimit'
-import { useDispatch } from 'react-redux'
-import BN from 'bignumber.js'
 import { LoadingOutlined } from '@ant-design/icons'
-import { Currency, PairChainInfo } from '../../state/bridge/reducer'
-import { updateCurrentCurrency, updateCurrentPairId } from '../../state/bridge/actions'
-import { checkAddress, getApproveStatus, getNetworkInfo, getPairInfo, getSwapFee, web3Utils } from '../../utils'
-import { getErc20Contract } from '../../utils/contract'
-import { updateBridgeLoading } from '../../state/application/actions'
+import { useWeb3React } from '@web3-react/core'
+import { Input, notification, Tooltip } from 'antd'
+import BN from 'bignumber.js'
+import i18next from 'i18next'
+import React from 'react'
+import { useTranslation } from 'react-i18next'
+import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
-import {
-  useTokenList,
-  useCurrentCurrency,
-  useTokenSupporChain,
-  usePariList,
-  useCurrentPairId,
-} from '../../state/bridge/hooks'
+import styled from 'styled-components'
 import Web3 from 'web3'
 import { BridgeService } from '../../api/bridge'
+import AmountInput, { ErrorText, TextWrap } from '../../components/AmountInput'
+import ChainBridge, { Box } from '../../components/ChainBridge'
+import Row from '../../components/Row'
+import SelectToken from '../../components/SelectToken/SelectToken'
+import TransferButton from '../../components/TransferButton'
+import TransferLimit from '../../components/TransferLimit'
 import { theme } from '../../constants/theme'
-import { useBridgeLoading } from '../../state/application/hooks'
-import i18next from 'i18next'
-import { Text } from './confirm'
 import { useInterval } from '../../hooks/useInterval'
-import { findPairBySrcChain } from '../../utils'
+import { updateBridgeLoading } from '../../state/application/actions'
+import { useBridgeLoading } from '../../state/application/hooks'
+import { updateCurrentCurrency, updateCurrentPairId } from '../../state/bridge/actions'
+import { useCurrentCurrency, useCurrentPairId, useTokenList, useTokenSupporChain } from '../../state/bridge/hooks'
+import { Currency, PairChainInfo } from '../../state/bridge/reducer'
+import {
+  checkAddress,
+  findPairBySrcChain,
+  getApproveStatus,
+  getNetworkInfo,
+  getPairInfo,
+  getSwapFee,
+  web3Utils,
+} from '../../utils'
+import { getErc20Contract } from '../../utils/contract'
 import { formatCurrency } from '../../utils/format'
+import { ChainBridgeType, MoreInfo, Text } from './confirm'
 
 import CommonText from '../../components/Text'
 import { getNetWorkConnect } from '../../connectors/index'
@@ -292,6 +292,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
       try {
         const lib = getNetWorkConnect(selectedPairInfo.srcChainInfo.chainId as any)
         const fee = await getSwapFee(selectedPairInfo, lib)
+        console.log('swapFee', fee)
         setSwapFee(() => new BN(fee).toNumber().toString())
         setCheckList((list) => {
           return {

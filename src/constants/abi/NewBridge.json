@@ -206,6 +206,12 @@
     "anonymous": false,
     "inputs": [
       {
+        "indexed": false,
+        "internalType": "string",
+        "name": "chain",
+        "type": "string"
+      },
+      {
         "indexed": true,
         "internalType": "uint256",
         "name": "previousSwapFee",
@@ -373,6 +379,43 @@
   {
     "inputs": [
       {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "name": "chainSwapFee",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_targetAddress",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "chain",
+        "type": "string"
+      }
+    ],
+    "name": "depositNative",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "address",
         "name": "",
         "type": "address"
@@ -392,6 +435,40 @@
       }
     ],
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_token",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "_targetAddress",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "chain",
+        "type": "string"
+      }
+    ],
+    "name": "depositToken",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "payable",
     "type": "function"
   },
   {
@@ -490,6 +567,19 @@
   },
   {
     "inputs": [],
+    "name": "getLogicAddress",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "getOperatorRequireNum",
     "outputs": [
       {
@@ -516,6 +606,61 @@
   },
   {
     "inputs": [],
+    "name": "getStoreAddress",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_chain",
+        "type": "string"
+      }
+    ],
+    "name": "getSwapFee",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "class",
+        "type": "string"
+      },
+      {
+        "internalType": "address",
+        "name": "oldAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "newAddress",
+        "type": "address"
+      }
+    ],
+    "name": "modifyAdminAddress",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "name",
     "outputs": [
       {
@@ -525,6 +670,13 @@
       }
     ],
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "pause",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -565,92 +717,87 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "swapFee",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
         "internalType": "address",
-        "name": "",
+        "name": "token",
         "type": "address"
-      }
-    ],
-    "name": "withdrawSelector",
-    "outputs": [
+      },
       {
         "internalType": "string",
-        "name": "selector",
+        "name": "method",
         "type": "string"
       },
       {
         "internalType": "bool",
-        "name": "isValueFirst",
+        "name": "_isValueFirst",
         "type": "bool"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "string",
-        "name": "_targetAddress",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "chain",
-        "type": "string"
-      }
-    ],
-    "name": "depositNative",
+    "name": "setDepositSelector",
     "outputs": [],
-    "stateMutability": "payable",
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
     "inputs": [
       {
         "internalType": "address",
-        "name": "_token",
+        "name": "_feeTo",
         "type": "address"
+      }
+    ],
+    "name": "setFeeTo",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_chain",
+        "type": "string"
       },
       {
         "internalType": "uint256",
-        "name": "value",
+        "name": "_swapFee",
         "type": "uint256"
-      },
-      {
-        "internalType": "string",
-        "name": "_targetAddress",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "chain",
-        "type": "string"
       }
     ],
-    "name": "depositToken",
-    "outputs": [
+    "name": "setSwapFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "method",
+        "type": "string"
+      },
       {
         "internalType": "bool",
-        "name": "",
+        "name": "_isValueFirst",
         "type": "bool"
       }
     ],
-    "stateMutability": "payable",
+    "name": "setWithdrawSelector",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "unpause",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -691,6 +838,30 @@
     "inputs": [
       {
         "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "withdrawSelector",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "selector",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "isValueFirst",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
         "name": "_token",
         "type": "address"
       },
@@ -724,160 +895,6 @@
       }
     ],
     "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "string",
-        "name": "class",
-        "type": "string"
-      },
-      {
-        "internalType": "address",
-        "name": "oldAddress",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "newAddress",
-        "type": "address"
-      }
-    ],
-    "name": "modifyAdminAddress",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getLogicAddress",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getStoreAddress",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "pause",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "unpause",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "token",
-        "type": "address"
-      },
-      {
-        "internalType": "string",
-        "name": "method",
-        "type": "string"
-      },
-      {
-        "internalType": "bool",
-        "name": "_isValueFirst",
-        "type": "bool"
-      }
-    ],
-    "name": "setDepositSelector",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "token",
-        "type": "address"
-      },
-      {
-        "internalType": "string",
-        "name": "method",
-        "type": "string"
-      },
-      {
-        "internalType": "bool",
-        "name": "_isValueFirst",
-        "type": "bool"
-      }
-    ],
-    "name": "setWithdrawSelector",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_swapFee",
-        "type": "uint256"
-      }
-    ],
-    "name": "setSwapFee",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_feeTo",
-        "type": "address"
-      }
-    ],
-    "name": "setFeeTo",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "string",
-        "name": "_chain",
-        "type": "string"
-      }
-    ],
-    "name": "getSwapFee",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
     "type": "function"
   }
 ]

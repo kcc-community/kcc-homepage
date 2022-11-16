@@ -36,7 +36,7 @@ export const MAIN_NETWORKS = {
     symbol: 'KCS',
     browser: 'https://explorer.kcc.io',
     logo: '/token/chain-321.png',
-    bridgeCoreAddress: '0xe61dd9cA7364225aFBFB79e15AD33864424e6aE4',
+    bridgeCoreAddress: '0x7d60D37653c98B38e5fD2a3C0c762dCb276Bc54E',
     standard: 'KRC20',
   },
   56: {

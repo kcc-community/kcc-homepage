@@ -103,7 +103,6 @@ const ChainBridge: React.FunctionComponent<ChainBridgeProps> = (props) => {
   // need to check chain,if not kcc,can't
   const cuclDistChainIds = React.useMemo(() => {
     // remove src chain id from distChainIds
-    console.log('distChainIds', distChainIds)
     const ids: number[] = [...distChainIds]
     /* for (let i = 0; i < pairList.length; i++) {
       const chain = pairList[i]
