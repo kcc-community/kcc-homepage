@@ -1,9 +1,9 @@
+import { LoadingOutlined } from '@ant-design/icons'
 import { Input } from 'antd'
 import axios from 'axios'
 import React from 'react'
 import styled from 'styled-components'
 import ProofPanel from './ProofPanel'
-import { LoadingOutlined } from '@ant-design/icons'
 
 const Bg = require('../../assets/images/proof-bg.png').default
 
@@ -17,6 +17,10 @@ const Wrap = styled.div`
   background: url(${Bg}) top center no-repeat, #000;
   height: 100%;
   min-height: calc(100vh - 360px);
+  @media (max-width: 768px) {
+    height: auto;
+    min-height: auto;
+  }
 `
 const Content = styled.div`
   width: 100%;
@@ -26,6 +30,12 @@ const Content = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   padding-top: 144px;
+  padding-bottom: 100px;
+  @media (max-width: 768px) {
+    max-width: 100%;
+    align-items: center;
+    padding: 100px 24px;
+  }
 `
 
 const Title = styled.div`
@@ -61,6 +71,10 @@ const StyledInput = styled(Input)`
       background-color: #000 !important;
     }
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 const Icon = styled.img`
   width: 20px;
@@ -83,12 +97,18 @@ const NoData = styled.div`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    height: 200px;
+  }
 `
 
 const NoDataIcon = styled.img`
   width: 84px;
   height: auto;
   opacity: 0.5;
+  @media (max-width: 768px) {
+    width: 44px;
+  }
 `
 
 const NoDataText = styled.div`
@@ -140,7 +160,6 @@ const Proof: React.FC = () => {
       try {
         const response = await axios.get('https://www.binance.com/bapi/tokencanal/v2/tokencanal/lockinfo')
         const { status, data } = response
-        console.log('response', response)
         if (status === 200) {
           setList(() => data.tokens)
         } else {

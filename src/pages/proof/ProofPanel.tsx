@@ -2,6 +2,7 @@ import { message } from 'antd'
 import BN from 'bignumber.js'
 import Copy from 'copy-to-clipboard'
 import React from 'react'
+import { isMobile } from 'react-device-detect'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 import type { LockInfo } from '.'
@@ -19,6 +20,9 @@ const Wrap = styled.div`
   & + & {
     margin-top: 20px;
   }
+  @media (max-width: 768px) {
+    padding: 12px;
+  }
 `
 const TitleWrap = styled.div`
   display: flex;
@@ -31,6 +35,10 @@ const TokenIcon = styled.img`
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  @media (max-width: 768px) {
+    width: 32px;
+    height: 32px;
+  }
 `
 
 const SymbolText = styled.div`
@@ -41,6 +49,9 @@ const SymbolText = styled.div`
   align-items: center;
   color: #ffffff;
   margin-left: 12px;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `
 const Line = styled.div`
   width: 1px;
@@ -55,6 +66,9 @@ const NameText = styled.div`
   display: flex;
   align-items: center;
   color: #ffffff;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `
 
 const ListWrap = styled.div`
@@ -62,6 +76,10 @@ const ListWrap = styled.div`
   flex-flow: row nowrap;
   justify-content: center;
   align-items: flex-start;
+  @media (max-width: 768px) {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
 `
 
 const LockList = styled.div`
@@ -79,6 +97,10 @@ const Middle = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding-top: 70px;
+  @media (max-width: 768px) {
+    padding-top: 30px;
+    justify-content: center;
+  }
 `
 
 const ListInfoText = styled.div`
@@ -104,6 +126,10 @@ const IconWrap = styled.div`
   & + & {
     margin-left: 12px;
   }
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+  }
 `
 const MiddleIconWrap = styled.div`
   border: 1px solid #fff;
@@ -119,6 +145,10 @@ const MiddleIconWrap = styled.div`
 const Icon = styled.img`
   width: 20px;
   height: 20px;
+  @media (max-width: 768px) {
+    width: 16px;
+    height: 16px;
+  }
 `
 
 const TokenWrap = styled.div`
@@ -131,6 +161,11 @@ const TokenWrap = styled.div`
   padding: 12px 16px;
   & + & {
     margin-top: 12px;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
   }
 `
 
@@ -145,6 +180,9 @@ const LockAmount = styled.div`
   flex: none;
   order: 0;
   flex-grow: 0;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `
 
 const AddressRow = styled.div`
@@ -152,11 +190,25 @@ const AddressRow = styled.div`
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`
+
+const AddressText = styled.div`
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   color: #ffffff;
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 `
+
 const TokenTag = styled.div`
   font-style: normal;
   font-weight: 400;
@@ -190,7 +242,7 @@ const TokenPanel: React.FC<any> = (props) => {
             decimalSeparator: '.',
           })}  ${props.name}`}</LockAmount>
           <AddressRow>
-            {shortAddress1(props.address)}
+            <AddressText>{shortAddress1(props.address)}</AddressText>
             <TokenTag>{props.network}</TokenTag>
           </AddressRow>
         </Box>
@@ -202,13 +254,13 @@ const TokenPanel: React.FC<any> = (props) => {
             decimalSeparator: '.',
           })}  ${props.symbol}`}</LockAmount>
           <AddressRow>
-            {shortAddress1(props.address)}
+            <AddressText>{shortAddress1(props.address)}</AddressText>
             <TokenTag>{props.network}</TokenTag>
           </AddressRow>
         </Box>
       )}
 
-      <AddressRow>
+      <AddressRow style={{ marginTop: isMobile ? '5px' : '0px' }}>
         <IconWrap onClick={() => copyAddress(props.address)}>
           <Icon src={require('../../assets/images/Icons/copy.png').default} alt="copy-icon" />
         </IconWrap>
