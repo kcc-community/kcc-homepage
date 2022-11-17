@@ -1,8 +1,9 @@
 import { Input } from 'antd'
+import axios from 'axios'
 import React from 'react'
 import styled from 'styled-components'
 import ProofPanel from './ProofPanel'
-import list from './text.json'
+import { LoadingOutlined } from '@ant-design/icons'
 
 const Bg = require('../../assets/images/proof-bg.png').default
 
@@ -52,9 +53,11 @@ const StyledInput = styled(Input)`
   width: 371px;
   margin-top: 48px;
   border-radius: 24px;
+  color: #fff;
   & {
     .ant-input-prefix,
     .ant-input {
+      color: #fff;
       background-color: #000 !important;
     }
   }
@@ -73,10 +76,30 @@ const ListWrap = styled.div`
   margin-top: 35px;
 `
 
-const Item = styled.div`
-  background: #000000;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 12px;
+const NoData = styled.div`
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+`
+
+const NoDataIcon = styled.img`
+  width: 84px;
+  height: auto;
+  opacity: 0.5;
+`
+
+const NoDataText = styled.div`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  opacity: 0.5;
+  margin-top: 18px;
 `
 
 const mockData = {
@@ -107,6 +130,37 @@ const mockData = {
 export type LockInfo = typeof mockData
 
 const Proof: React.FC = () => {
+  const [loading, setLoading] = React.useState<boolean>(false)
+  const [list, setList] = React.useState<LockInfo[]>([])
+  const [input, setInput] = React.useState<string>('')
+
+  React.useEffect(() => {
+    async function getLockList() {
+      setLoading(() => true)
+      try {
+        const response = await axios.get('https://www.binance.com/bapi/tokencanal/v2/tokencanal/lockinfo')
+        const { status, data } = response
+        console.log('response', response)
+        if (status === 200) {
+          setList(() => data.tokens)
+        } else {
+          setList(() => [])
+        }
+      } finally {
+        setLoading(() => false)
+      }
+    }
+    getLockList()
+  }, [])
+
+  const filterList = React.useMemo(() => {
+    return list.filter(
+      (n) =>
+        n.name.toLowerCase().includes(input.trim().toLowerCase()) ||
+        n.symbol.toLowerCase().includes(input.trim().toLowerCase())
+    )
+  }, [list, input])
+
   return (
     <Wrap>
       <Content>
@@ -117,17 +171,31 @@ const Proof: React.FC = () => {
           unchanged;
         </Desc>
         <StyledInput
+          onChange={(e) => setInput(() => e.target.value)}
           prefix={<Icon src={require('../../assets/images/Icons/search.png').default} />}
           placeholder="Search Coin"
           maxLength={36}
           min={0}
           style={{ backgroundColor: '#000' }}
         />
-        <ListWrap>
-          {list.map((lockToken, n) => {
-            return <ProofPanel {...lockToken} key={n} />
-          })}
-        </ListWrap>
+        {filterList.length === 0 && loading && (
+          <NoData>
+            <LoadingOutlined style={{ fontSize: '30px', color: '#fff' }} />
+          </NoData>
+        )}
+        {filterList.length === 0 && !loading && (
+          <NoData>
+            <NoDataIcon src={require('../../assets/images/Icons/no-record.svg').default} alt="no-record" />
+            <NoDataText>No record</NoDataText>
+          </NoData>
+        )}
+        {filterList.length && (
+          <ListWrap>
+            {filterList.map((lockToken, n) => {
+              return <ProofPanel {...lockToken} key={n} />
+            })}
+          </ListWrap>
+        )}
       </Content>
     </Wrap>
   )

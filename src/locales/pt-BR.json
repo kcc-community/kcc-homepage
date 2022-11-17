@@ -194,7 +194,7 @@
   "Apporve Success": "Aprovação bem-sucedida",
   "Transaction Confirmed": " Sua transação está sendo processada. Por favor, verifique seus detalhes no histórico de transações. ",
   "Transfer confirmation": "Confirmação de transferência",
-  "KCC Bridge Launched": "Lançada a KCC Bridge", 
+  "KCC Bridge Launched": "Lançada a KCC Bridge",
   "Max": "Máx.",
   "Approved Success": "Sucesso aprovado",
   "Add assets to the wallet list": "Adicionar ativos à lista da carteira",
@@ -236,5 +236,6 @@
   "KCC Validator Election Launched": "Lançada a eleição do validador KCC",
   "KCC Mainnet Ishikari Hardfork Upgrade": "Atualização KCC Mainnet Ishikari Hardfork",
   "News": "Notícias",
-  "Node Staking": "Node Staking"
+  "Node Staking": "Node Staking",
+  "Proof of assets": "Comprovação de bens"
 }

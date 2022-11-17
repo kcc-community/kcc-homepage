@@ -8,7 +8,6 @@ export const shortAddress = (address: string): string => {
 }
 
 export const shortAddress1 = (address: string): string => {
-  invariant(address.length > 12, 'given address is valid?')
   const pre = address.substr(0, address.length / 2 - 4)
   const last = address.substr(-(address.length / 2 - 6))
   return `${pre}...${last}`
