@@ -99,9 +99,7 @@
   "lint-staged": {
     "src/**": [
       "prettier --write .",
-      "eslint --fix",
-      "npm version patch",
-      "npm run changelog"
+      "eslint --fix"
     ]
   },
   "eslintConfig": {

@@ -158,10 +158,10 @@ const Proof: React.FC = () => {
     async function getLockList() {
       setLoading(() => true)
       try {
-        const response = await axios.get('https://www.binance.com/bapi/tokencanal/v2/tokencanal/lockinfo')
+        const response = await axios.get('https://bridge-mainnet.kcc.network/v1/bridge/server/lock-info')
         const { status, data } = response
         if (status === 200) {
-          setList(() => data.tokens)
+          setList(() => data.data.tokens)
         } else {
           setList(() => [])
         }
