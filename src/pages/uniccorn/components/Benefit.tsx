@@ -102,16 +102,16 @@ const CardDesc = styled.div`
 const cardList = [
   {
     desc: 'Share Grand prize pools (in KCS/stable-coin) around $1M + up to around $10M in liquidity support',
-    icon: require('../../../assets/images/unicorn/gift.png').default,
+    icon: require('../../../assets/images/unicorn/gift.png').default
   },
   {
     desc: 'Opportunity to enter an accelerator/incubating process from KCC GoDAO as well as anyone of this event’s sponsors/partners',
-    icon: require('../../../assets/images/unicorn/money.png').default,
+    icon: require('../../../assets/images/unicorn/money.png').default
   },
   {
     desc: 'Receiving marketing support from KCC and KCC GoDAO ambassadors ',
-    icon: require('../../../assets/images/unicorn/support.png').default,
-  },
+    icon: require('../../../assets/images/unicorn/support.png').default
+  }
 ]
 
 const Benefit = () => {

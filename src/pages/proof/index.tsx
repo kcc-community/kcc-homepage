@@ -133,8 +133,8 @@ const mockData = {
       balance: '271.39',
       contract: '',
       decimal: 0,
-      explorer: 'https://explorer.btc.com/btc/address/bc1qg9ura3eja58gdgat74fmnahgsuxzy9499ca62u',
-    },
+      explorer: 'https://explorer.btc.com/btc/address/bc1qg9ura3eja58gdgat74fmnahgsuxzy9499ca62u'
+    }
   ],
   wrapInfo: [
     {
@@ -142,9 +142,9 @@ const mockData = {
       address: '0xfA93C12Cd345c658bc4644D1D4E1B9615952258C',
       symbol: 'BTCK',
       supply: '271.4',
-      explorer: 'https://explorer.kcc.io/en/address/0xfA93C12Cd345c658bc4644D1D4E1B9615952258C',
-    },
-  ],
+      explorer: 'https://explorer.kcc.io/en/address/0xfA93C12Cd345c658bc4644D1D4E1B9615952258C'
+    }
+  ]
 }
 
 export type LockInfo = typeof mockData

@@ -145,7 +145,7 @@ const AmbassadorPage: React.FunctionComponent<AmbassadorPageProps> = () => {
               color: '#fff',
               width: isMobile ? '100%' : 'auto',
               maxWidth: isMobile ? '100%' : '630px',
-              textAlign: isMobile ? 'center' : 'left',
+              textAlign: isMobile ? 'center' : 'left'
             }}
           >
             {t('KCC GoDAO Ambassador Program')}

@@ -10,7 +10,7 @@ export class BridgeService {
   static pairList(): Promise<any> {
     return Axios({
       method: 'get',
-      url: '/pair/list',
+      url: '/pair/list'
     })
   }
 
@@ -19,8 +19,8 @@ export class BridgeService {
       method: 'get',
       url: '/white/in',
       params: {
-        addr: address,
-      },
+        addr: address
+      }
     })
   }
 
@@ -29,8 +29,8 @@ export class BridgeService {
       method: 'get',
       url: '/black/in',
       params: {
-        addr: address,
-      },
+        addr: address
+      }
     })
   }
 
@@ -42,15 +42,15 @@ export class BridgeService {
         srcAccount: address,
         page,
         limit,
-        srcTxHash: hash,
-      },
+        srcTxHash: hash
+      }
     })
   }
 
   static getBridgeStatus(): Promise<HttpResponse<any>> {
     return Axios({
       method: 'get',
-      url: '/fusing',
+      url: '/fusing'
     })
   }
 }

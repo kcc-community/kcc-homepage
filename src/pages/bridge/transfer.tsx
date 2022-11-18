@@ -30,7 +30,7 @@ import {
   getNetworkInfo,
   getPairInfo,
   getSwapFee,
-  web3Utils,
+  web3Utils
 } from '../../utils'
 import { getErc20Contract } from '../../utils/contract'
 import { formatCurrency } from '../../utils/format'
@@ -41,7 +41,7 @@ import { getNetWorkConnect } from '../../connectors/index'
 
 export enum ListType {
   'WHITE',
-  'BLACK',
+  'BLACK'
 }
 
 export interface BridgeTransferPageProps {}
@@ -198,7 +198,7 @@ const statusList = {
   senderWhite: false,
   senderBlack: false,
   receiverWhite: false,
-  receiverBlack: false,
+  receiverBlack: false
 }
 
 export type CheckListType = typeof statusList
@@ -275,7 +275,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
       setCheckList((list) => {
         return {
           ...list,
-          pair: currentPairId !== -1,
+          pair: currentPairId !== -1
         }
       })
       return getPairInfo(currentPairId)
@@ -297,7 +297,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
         setCheckList((list) => {
           return {
             ...list,
-            swapFee: true,
+            swapFee: true
           }
         })
       } catch (e) {
@@ -306,7 +306,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
         setCheckList((list) => {
           return {
             ...list,
-            swapFee: false,
+            swapFee: false
           }
         })
       } finally {
@@ -327,7 +327,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
       setCheckList((list) => {
         return {
           ...list,
-          address: true,
+          address: true
         }
       })
     }
@@ -343,7 +343,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
     setCheckList((list) => {
       return {
         ...list,
-        address: isAddress,
+        address: isAddress
       }
     })
     setReceiveAddress(() => address)
@@ -365,7 +365,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
         symbol: src.currency,
         name: src?.name,
         logoUrl: src.logoUrl,
-        decimals: src.decimals,
+        decimals: src.decimals
       }
       setSelectedCurrency(c)
       // change src chain id
@@ -439,7 +439,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
           setCheckList((list) => {
             return {
               ...list,
-              available: true,
+              available: true
             }
           })
         } catch {
@@ -447,7 +447,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
           setCheckList((list) => {
             return {
               ...list,
-              available: false,
+              available: false
             }
           })
         } finally {
@@ -576,7 +576,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
       amount: new BN(amount).multipliedBy(Math.pow(10, selectedPairInfo?.srcChainInfo.decimals)).toString(10),
       receiveAmount: receiveAmount,
       timestamp: '',
-      currency: currency,
+      currency: currency
     }
     localStorage.setItem('PRESEND_ORDER', JSON.stringify(newOrder))
   }
@@ -600,7 +600,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
           '115792089237316195423570985008687907853269984665640564039457584007913129639935'
         )
         .send({
-          from: account,
+          from: account
         })
         .once('sending', () => {
           dispatch(updateBridgeLoading({ visible: true, status: 0 }))
@@ -657,14 +657,14 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
       setCheckList((list) => {
         return {
           ...list,
-          totolSupply: true,
+          totolSupply: true
         }
       })
     } catch {
       setCheckList((list) => {
         return {
           ...list,
-          totolSupply: false,
+          totolSupply: false
         }
       })
     }
@@ -680,7 +680,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
     setCheckList((list) => {
       return {
         ...list,
-        network: result,
+        network: result
       }
     })
   }, [chainId, selectedPairInfo?.srcChainInfo.chainId])
@@ -757,7 +757,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
                       width: '12px',
                       height: '12px',
                       color: '#000',
-                      fontSize: '10px',
+                      fontSize: '10px'
                     }}
                   />
                 )}
@@ -791,7 +791,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
                       width: '12px',
                       height: '12px',
                       color: '#000',
-                      fontSize: '10px',
+                      fontSize: '10px'
                     }}
                   />
                 )}

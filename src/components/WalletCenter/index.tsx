@@ -1,31 +1,30 @@
 import React from 'react'
-import {message, Badge} from 'antd'
+import { message, Badge } from 'antd'
 import styled from 'styled-components'
-import {useWeb3React} from '@web3-react/core'
-import {useTranslation} from 'react-i18next'
+import { useWeb3React } from '@web3-react/core'
+import { useTranslation } from 'react-i18next'
 import copy from 'copy-to-clipboard'
-import BN from "bignumber.js"
-import i18next from "i18next"
+import BN from 'bignumber.js'
+import i18next from 'i18next'
 
-import {CopyOutlined, ChromeOutlined,PlusOutlined } from '@ant-design/icons'
+import { CopyOutlined, ChromeOutlined, PlusOutlined } from '@ant-design/icons'
 
-import {theme} from '../../constants/theme'
+import { theme } from '../../constants/theme'
 import useAuth from '../../hooks/useAuth'
-import {useResponsive} from '../../utils/responsive'
-import {formatCurrency, shortAddress} from "../../utils/format"
-import {getNetworkInfo, getWalletInfo} from "../../utils"
-import {useBalance, useWalletId} from "../../state/wallet/hooks"
-import {updateBalance} from "../../utils/wallet"
-import {connectorLocalStorageKey} from "../../constants/wallet"
-
+import { useResponsive } from '../../utils/responsive'
+import { formatCurrency, shortAddress } from '../../utils/format'
+import { getNetworkInfo, getWalletInfo } from '../../utils'
+import { useBalance, useWalletId } from '../../state/wallet/hooks'
+import { updateBalance } from '../../utils/wallet'
+import { connectorLocalStorageKey } from '../../constants/wallet'
 
 export interface LogoutModalProps {
-    visible: boolean
-    toggleVisible: any
+  visible: boolean
+  toggleVisible: any
 }
 
 const WalletCenterWrap = styled.div<{ visible: boolean }>`
-  display: ${({visible}) => {
+  display: ${({ visible }) => {
     if (visible) {
       return 'flex'
     }
@@ -53,8 +52,8 @@ const WalletInfoWrap = styled.div`
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-  @media (max-width: 768px){
-    width:96%;
+  @media (max-width: 768px) {
+    width: 96%;
   }
 `
 const SpaceRow = styled.div`
@@ -114,7 +113,7 @@ const ShiningBadge = styled(Badge)`
 `
 
 const OperateWrap = styled(SpaceRow)`
-  margin-top:30px;
+  margin-top: 30px;
 `
 
 const OperateItem = styled.div`
@@ -124,7 +123,7 @@ const OperateItem = styled.div`
   justify-content: center;
   align-items: center;
   color: #fff;
-  background: #39393B;
+  background: #39393b;
   width: 70px;
   height: 70px;
   cursor: pointer;
@@ -138,162 +137,167 @@ const OperateText = styled.div`
   margin-top: 5px;
 `
 const CloseIconWrap = styled.div`
-  width:44px;
-  height:44px;
+  width: 44px;
+  height: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  background:#252528;
+  background: #252528;
   border-radius: 50%;
-  top:340px;
-  left:50%;
+  top: 340px;
+  left: 50%;
   transform: translateX(-50%);
-  cursor:pointer;
+  cursor: pointer;
   transition: all 0.6s ease-in-out;
-  &:hover{
+  &:hover {
     transform: translateX(-50%) rotate(180deg);
   }
 `
 
-const OperateList = [{
+const OperateList = [
+  {
     key: '0',
     title: 'View',
-    icon:  <ChromeOutlined style={{fontSize:'20px'}}/>
-}, {
+    icon: <ChromeOutlined style={{ fontSize: '20px' }} />
+  },
+  {
     key: '1',
     title: 'Copy',
-    icon:<CopyOutlined style={{fontSize:'20px'}}/>
-}, {
+    icon: <CopyOutlined style={{ fontSize: '20px' }} />
+  },
+  {
     key: '2',
     title: 'Logout',
-    icon: <OperateIcon src={require('../../assets/images/bridge/logout.svg').default}/>
-}]
-
+    icon: <OperateIcon src={require('../../assets/images/bridge/logout.svg').default} />
+  }
+]
 
 const LogoutModal: React.FunctionComponent<LogoutModalProps> = (props) => {
-    const {account, chainId, library,deactivate} = useWeb3React()
+  const { account, chainId, library, deactivate } = useWeb3React()
 
-    const {t} = useTranslation()
-    const {logout} = useAuth()
-    const {isMobile} = useResponsive()
+  const { t } = useTranslation()
+  const { logout } = useAuth()
+  const { isMobile } = useResponsive()
 
-    const walletId = useWalletId()
+  const walletId = useWalletId()
 
-    const balance = useBalance()
+  const balance = useBalance()
 
-    React.useEffect(()=>{
-        const body = document.getElementsByTagName('body')[0]
-        body.style.height='100vh'
-        body.style.overflow = 'hidden'
-        return ()=>{
-            body.style.height="auto"
-            body.style.overflow = 'visible'
-        }
-    },[])
-
-    const walletInfo = React.useMemo(() => {
-        return getWalletInfo(walletId)
-    }, [walletId])
-
-    React.useEffect(() => {
-        if (library && account && chainId) {
-            updateBalance(library, chainId, account)
-        }
-    }, [library, chainId, account])
-
-
-    const copyAddress = () => {
-        if (account) {
-            copy(account)
-            message.success(i18next.t('Copy Success'))
-        }
+  React.useEffect(() => {
+    const body = document.getElementsByTagName('body')[0]
+    body.style.height = '100vh'
+    body.style.overflow = 'hidden'
+    return () => {
+      body.style.height = 'auto'
+      body.style.overflow = 'visible'
     }
+  }, [])
 
-    const networkInfo = React.useMemo(() => {
-        return getNetworkInfo(chainId as any)
-    }, [chainId])
+  const walletInfo = React.useMemo(() => {
+    return getWalletInfo(walletId)
+  }, [walletId])
 
-    React.useEffect(() => {
-        if (!chainId) {
-            hideSelf()
-        }
-    }, [chainId])
-
-    const nav2Scan = () => {
-        const suffix = `/address/${account?.toLowerCase()}`
-        if (chainId) {
-            window.open(`${networkInfo.browser}${suffix}`, '_blank')
-        }
+  React.useEffect(() => {
+    if (library && account && chainId) {
+      updateBalance(library, chainId, account)
     }
+  }, [library, chainId, account])
 
-    const hideSelf = () => {
-        props.toggleVisible(false)
+  const copyAddress = () => {
+    if (account) {
+      copy(account)
+      message.success(i18next.t('Copy Success'))
     }
+  }
 
-    const logoutAndLock = ()=>{
-        window.localStorage.removeItem(connectorLocalStorageKey)
-        logout()
-        hideSelf()
+  const networkInfo = React.useMemo(() => {
+    return getNetworkInfo(chainId as any)
+  }, [chainId])
+
+  React.useEffect(() => {
+    if (!chainId) {
+      hideSelf()
     }
+  }, [chainId])
 
-    const operateClick = (index: number) => {
-        switch (index) {
-            case 0:
-                nav2Scan()
-                break
-            case 1:
-                copyAddress()
-                break
-            case 2:
-                logoutAndLock()
-                break;
-            default:
-                console.log('call errored')
-        }
+  const nav2Scan = () => {
+    const suffix = `/address/${account?.toLowerCase()}`
+    if (chainId) {
+      window.open(`${networkInfo.browser}${suffix}`, '_blank')
     }
+  }
 
-    const OperateListDom = OperateList.map((operate, index) => {
-        return (
-            <OperateItem key={index} onClick={operateClick.bind(null, index)}>
-                {operate.icon}
-                <OperateText>{t(`${operate.title}`)}</OperateText>
-            </OperateItem>
-        )
-    })
+  const hideSelf = () => {
+    props.toggleVisible(false)
+  }
 
+  const logoutAndLock = () => {
+    window.localStorage.removeItem(connectorLocalStorageKey)
+    logout()
+    hideSelf()
+  }
 
+  const operateClick = (index: number) => {
+    switch (index) {
+      case 0:
+        nav2Scan()
+        break
+      case 1:
+        copyAddress()
+        break
+      case 2:
+        logoutAndLock()
+        break
+      default:
+        console.log('call errored')
+    }
+  }
+
+  const OperateListDom = OperateList.map((operate, index) => {
     return (
-        <WalletCenterWrap visible={props.visible} onScroll={(e)=>{e.preventDefault()}}>
-            <WalletInfoWrap>
-                <SpaceRow>
-                    <HighLightTitle>
-                        {account && shortAddress(account as any)}
-                    </HighLightTitle>
-                    <NetworkNameWrap>
-                        <ShiningBadge status="processing"/>
-                        {networkInfo?.abbr}
-                    </NetworkNameWrap>
-                </SpaceRow>
-                <WalletName>{walletInfo?.name}</WalletName>
-                <BalanceWrap>
-                    <SpaceRow>
-                        <NetworkNameWrap>
-                            <NetworkIcon src={networkInfo?.logo}/>
-                            {networkInfo?.symbol.toUpperCase()}
-                        </NetworkNameWrap>
-                        <BalanceText>{formatCurrency(new BN(balance).div(Math.pow(10, networkInfo.decimals)).toPrecision(6).toString())??'loading...'}</BalanceText>
-                    </SpaceRow>
-                </BalanceWrap>
-                <OperateWrap>
-                    {OperateListDom}
-                </OperateWrap>
-                <CloseIconWrap onClick={hideSelf}>
-                    <PlusOutlined  style={{transform:`rotate(45deg)`,fontSize:'20px',color:'#fff'}} />
-                </CloseIconWrap>
-            </WalletInfoWrap>
-        </WalletCenterWrap>
+      <OperateItem key={index} onClick={operateClick.bind(null, index)}>
+        {operate.icon}
+        <OperateText>{t(`${operate.title}`)}</OperateText>
+      </OperateItem>
     )
+  })
+
+  return (
+    <WalletCenterWrap
+      visible={props.visible}
+      onScroll={(e) => {
+        e.preventDefault()
+      }}
+    >
+      <WalletInfoWrap>
+        <SpaceRow>
+          <HighLightTitle>{account && shortAddress(account as any)}</HighLightTitle>
+          <NetworkNameWrap>
+            <ShiningBadge status="processing" />
+            {networkInfo?.abbr}
+          </NetworkNameWrap>
+        </SpaceRow>
+        <WalletName>{walletInfo?.name}</WalletName>
+        <BalanceWrap>
+          <SpaceRow>
+            <NetworkNameWrap>
+              <NetworkIcon src={networkInfo?.logo} />
+              {networkInfo?.symbol.toUpperCase()}
+            </NetworkNameWrap>
+            <BalanceText>
+              {formatCurrency(new BN(balance).div(Math.pow(10, networkInfo.decimals)).toPrecision(6).toString()) ??
+                'loading...'}
+            </BalanceText>
+          </SpaceRow>
+        </BalanceWrap>
+        <OperateWrap>{OperateListDom}</OperateWrap>
+        <CloseIconWrap onClick={hideSelf}>
+          <PlusOutlined style={{ transform: `rotate(45deg)`, fontSize: '20px', color: '#fff' }} />
+        </CloseIconWrap>
+      </WalletInfoWrap>
+    </WalletCenterWrap>
+  )
 }
 
 export default LogoutModal

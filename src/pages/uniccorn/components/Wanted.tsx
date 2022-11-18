@@ -315,32 +315,32 @@ const TypeList = [
     index: 'I',
     title: 'DeFi Projects',
     list: ['DEX', 'Lending', 'Derivatives', 'Insurance'],
-    icon: require('../../../assets/images/unicorn/t0.png').default,
+    icon: require('../../../assets/images/unicorn/t0.png').default
   },
   {
     index: 'II',
     title: 'Infrastructure Projects',
     list: ['Oracles', 'Front Ends', 'Wallets', 'Blockchain Explorers', 'Analytics'],
-    icon: require('../../../assets/images/unicorn/t1.png').default,
+    icon: require('../../../assets/images/unicorn/t1.png').default
   },
   {
     index: 'III',
     title: 'NFT',
     list: ['Collectibles', 'Artworks', 'Event Tickets', 'Music and Media'],
-    icon: require('../../../assets/images/unicorn/t2.png').default,
+    icon: require('../../../assets/images/unicorn/t2.png').default
   },
   {
     index: 'IV',
     title: 'GameFi &  Metaverse',
     list: [],
-    icon: require('../../../assets/images/unicorn/t3.png').default,
+    icon: require('../../../assets/images/unicorn/t3.png').default
   },
   {
     index: 'V',
     title: 'Others',
     list: ['SocialFi', 'DAO', 'Web3'],
-    icon: require('../../../assets/images/unicorn/t5.png').default,
-  },
+    icon: require('../../../assets/images/unicorn/t5.png').default
+  }
 ]
 
 interface TypeItem {
@@ -400,7 +400,7 @@ const Wanted = () => {
             style={{
               marginTop: isMobile ? '20px' : '45px',
               textAlign: isMobile ? 'left' : 'justify',
-              fontSize: isMobile ? '16px' : '40px',
+              fontSize: isMobile ? '16px' : '40px'
             }}
           >
             The KEY categories that Unicorn Contest focuses on:
@@ -430,7 +430,7 @@ const Wanted = () => {
               fontFamily: 'SF Pro Display Bold',
               marginTop: isMobile ? '45px' : '64px',
               textAlign: 'left',
-              width: '100%',
+              width: '100%'
             }}
           >
             The Purpose

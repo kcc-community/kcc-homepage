@@ -29,7 +29,7 @@ import store from '../../state'
 
 export enum ChainBridgeType {
   'DISPLAY',
-  'OPERATE',
+  'OPERATE'
 }
 
 export interface BridgeTransferPageProps {}
@@ -177,7 +177,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
       .depositNative(order.receiver, selectedChainInfo.dstChainInfo.chain.toLowerCase())
       .send({
         from: `${account}`,
-        value: amount,
+        value: amount
       })
       .once('sending', () => {
         dispatch(updateBridgeLoading({ visible: true, status: 0 }))
@@ -211,7 +211,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
       .depositToken(tokenAddress, `${order.amount}`, order.receiver, selectedChainInfo.dstChainInfo.chain.toLowerCase())
       .send({
         from: account,
-        value: `${order.fee}`,
+        value: `${order.fee}`
       })
       .once('sending', () => {
         dispatch(updateBridgeLoading({ visible: true, status: 0 }))
@@ -245,7 +245,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
         )
         notification.success({
           message: i18next.t(`App Tips`),
-          description: addAsset,
+          description: addAsset
         })
       })
       .on('error', () => {

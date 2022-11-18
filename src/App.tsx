@@ -20,7 +20,6 @@ import Proof from './pages/proof'
 
 import { clearConfirmAndOutdateOrder } from './utils/task'
 
-
 function RouteWithSubRoutes(route: { path: string; component: any; routes: any }) {
   return (
     <Route
@@ -41,22 +40,22 @@ export default function App() {
       routes: [
         {
           path: '/bridge/transfer',
-          component: BridgeTransfer,
+          component: BridgeTransfer
         },
         {
           path: '/bridge/list',
-          component: BridgeHistoryList,
+          component: BridgeHistoryList
         },
         {
           path: '/bridge/detail',
-          component: BridgeOrderDetail,
+          component: BridgeOrderDetail
         },
         {
           path: '/bridge/confirm',
-          component: BridgeOrderConfirm,
-        },
-      ],
-    },
+          component: BridgeOrderConfirm
+        }
+      ]
+    }
   ]
 
   let timer: any = null

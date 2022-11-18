@@ -20,7 +20,7 @@ export function formatCurrency(amount: string, symbol?: string) {
     groupSize: 3,
     secondaryGroupSize: 0,
     fractionGroupSeparator: ' ',
-    fractionGroupSize: 0,
+    fractionGroupSize: 0
   }
   if (symbol) fmt.suffix = symbol.toUpperCase()
   return new BN(amount).toFormat(fmt)

@@ -97,8 +97,8 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
       thumbnail_en: require('../../assets/images/activity/activity-1-en.png').default,
       deadline: '2023/07/07 10:57:33',
       url_ch: '/ambassador',
-      url_en: '/ambassador',
-    },
+      url_en: '/ambassador'
+    }
   ]
 
   const activities: any[] = [
@@ -108,7 +108,7 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
       thumbnail_en: require('../../assets/images/activity/g-mojitoswap-en.png').default,
       deadline: '2022/04/03 10:00:00',
       url_ch: 'https://gleam.io/xsZY6/kcc-special-event-mojitoswap-giveaway',
-      url_en: 'https://gleam.io/xsZY6/kcc-special-event-mojitoswap-giveaway',
+      url_en: 'https://gleam.io/xsZY6/kcc-special-event-mojitoswap-giveaway'
     },
 
     {
@@ -116,7 +116,7 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
       thumbnail_en: require('../../assets/images/activity/g-multi-en.png').default,
       deadline: '2022/04/03 10:00:00',
       url_ch: 'https://gleam.io/Mdzq6/kcc-special-event-multichain-giveaway',
-      url_en: 'https://gleam.io/Mdzq6/kcc-special-event-multichain-giveaway',
+      url_en: 'https://gleam.io/Mdzq6/kcc-special-event-multichain-giveaway'
     },
 
     {
@@ -124,7 +124,7 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
       thumbnail_en: require('../../assets/images/activity/g-kuswap-en.png').default,
       deadline: '2022/04/03 10:00:00',
       url_ch: 'https://gleam.io/Lzr2j/kcc-special-event-kuswap-giveaway',
-      url_en: 'https://gleam.io/Lzr2j/kcc-special-event-kuswap-giveaway',
+      url_en: 'https://gleam.io/Lzr2j/kcc-special-event-kuswap-giveaway'
     },
 
     {
@@ -132,7 +132,7 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
       thumbnail_en: require('../../assets/images/activity/g-umbrella-en.png').default,
       deadline: '2022/04/03 10:00:00',
       url_ch: 'https://gleam.io/6GDWZ/kcc-special-event-umbrella-giveaway',
-      url_en: 'https://gleam.io/6GDWZ/kcc-special-event-umbrella-giveaway',
+      url_en: 'https://gleam.io/6GDWZ/kcc-special-event-umbrella-giveaway'
     },
 
     {
@@ -140,7 +140,7 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
       thumbnail_en: require('../../assets/images/activity/g-dextools-en.png').default,
       deadline: '2022/04/03 10:00:00',
       url_ch: 'https://gleam.io/uovXT/kcc-special-event-dextools-giveaway',
-      url_en: 'https://gleam.io/uovXT/kcc-special-event-dextools-giveaway',
+      url_en: 'https://gleam.io/uovXT/kcc-special-event-dextools-giveaway'
     },
 
     // kcs kcc telegram
@@ -150,7 +150,7 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
       thumbnail_en: require('../../assets/images/activity/kcs-kcc-tele-en.png').default,
       deadline: '2022/04/03 10:00:00',
       url_ch: 'https://t.me/KCCOfficialEnglishCommunity',
-      url_en: 'https://t.me/KCCOfficialEnglishCommunity',
+      url_en: 'https://t.me/KCCOfficialEnglishCommunity'
     },
 
     {
@@ -160,7 +160,7 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
       url_ch:
         'https://kccofficial.medium.com/kcc-special-events-is-coming-get-lottery-tickets-to-win-21-000-kcs-92c6f022963',
       url_en:
-        'https://kccofficial.medium.com/kcc-special-events-is-coming-get-lottery-tickets-to-win-21-000-kcs-92c6f022963',
+        'https://kccofficial.medium.com/kcc-special-events-is-coming-get-lottery-tickets-to-win-21-000-kcs-92c6f022963'
     },
 
     {
@@ -170,7 +170,7 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
       url_ch:
         'https://kccofficial.medium.com/kcc-special-events-is-coming-get-lottery-tickets-to-win-21-000-kcs-92c6f022963',
       url_en:
-        'https://kccofficial.medium.com/kcc-special-events-is-coming-get-lottery-tickets-to-win-21-000-kcs-92c6f022963',
+        'https://kccofficial.medium.com/kcc-special-events-is-coming-get-lottery-tickets-to-win-21-000-kcs-92c6f022963'
     },
 
     {
@@ -180,42 +180,42 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
       url_ch:
         'https://multichainorg.medium.com/join-the-cross-chain-mega-event-multichain-x-kcc-x-mojitoswap-x-coolmining-e7b403dba5c4',
       url_en:
-        'https://multichainorg.medium.com/join-the-cross-chain-mega-event-multichain-x-kcc-x-mojitoswap-x-coolmining-e7b403dba5c4',
+        'https://multichainorg.medium.com/join-the-cross-chain-mega-event-multichain-x-kcc-x-mojitoswap-x-coolmining-e7b403dba5c4'
     },
     {
       thumbnail_ch: require('../../assets/images/activity/KCC-AMA-CN.png').default,
       thumbnail_en: require('../../assets/images/activity/KCC-AMA-EN.png').default,
       deadline: '2021/08/09 10:57:33',
       url_ch: 'https://kccofficial.medium.com/kcc-ama-series-episode-1-whats-done-and-what-s-next-in-2021-4f50685a350c',
-      url_en: 'https://kccofficial.medium.com/kcc-ama-series-episode-1-whats-done-and-what-s-next-in-2021-4f50685a350c',
+      url_en: 'https://kccofficial.medium.com/kcc-ama-series-episode-1-whats-done-and-what-s-next-in-2021-4f50685a350c'
     },
     {
       thumbnail_ch: require('../../assets/images/activity/kuswap-cn.jpg').default,
       thumbnail_en: require('../../assets/images/activity/kuswap-en.jpg').default,
       deadline: '2021/08/09 10:57:33',
       url_ch: 'https://kccofficial.medium.com/kcc-ama-series-episode2-kuswap-safety-and-security-c642a46015f8',
-      url_en: 'https://kccofficial.medium.com/kcc-ama-series-episode2-kuswap-safety-and-security-c642a46015f8',
+      url_en: 'https://kccofficial.medium.com/kcc-ama-series-episode2-kuswap-safety-and-security-c642a46015f8'
     },
     {
       thumbnail_ch: require('../../assets/images/activity/nft-cn.png').default,
       thumbnail_en: require('../../assets/images/activity/nft-en.png').default,
       deadline: '2021/09/10 10:57:33',
       url_ch: 'https://kccofficial.medium.com/kcc-ama-series-episode3-nfts-realm-nft-and-kcc-321d661d00f4',
-      url_en: 'https://kccofficial.medium.com/kcc-ama-series-episode3-nfts-realm-nft-and-kcc-321d661d00f4',
+      url_en: 'https://kccofficial.medium.com/kcc-ama-series-episode3-nfts-realm-nft-and-kcc-321d661d00f4'
     },
     {
       thumbnail_ch: require('../../assets/images/activity/stable-coin-cn.jpg').default,
       thumbnail_en: require('../../assets/images/activity/stable-coin-en.jpg').default,
       deadline: '2021/09/10 10:57:33',
       url_ch: 'https://kccofficial.medium.com/kcc-ama-series-episode4-paprprintr-stablecoin-and-kcc-63ce6c7401ce',
-      url_en: 'https://kccofficial.medium.com/kcc-ama-series-episode4-paprprintr-stablecoin-and-kcc-63ce6c7401ce',
+      url_en: 'https://kccofficial.medium.com/kcc-ama-series-episode4-paprprintr-stablecoin-and-kcc-63ce6c7401ce'
     },
     {
       thumbnail_ch: require('../../assets/images/activity/pentonium-en.png').default,
       thumbnail_en: require('../../assets/images/activity/pentonium-cn.png').default,
       deadline: '2021/09/10 10:57:33',
       url_ch: 'https://pentonium.medium.com/ama-with-kcc-recap-de308a6e29c5',
-      url_en: 'https://pentonium.medium.com/ama-with-kcc-recap-de308a6e29c5',
+      url_en: 'https://pentonium.medium.com/ama-with-kcc-recap-de308a6e29c5'
     },
     {
       thumbnail_ch: require('../../assets/images/activity/padd-cn.png').default,
@@ -224,15 +224,15 @@ const ActivitiesPage: React.FunctionComponent<GrantsPageProps> = () => {
       url_ch:
         'https://kccofficial.medium.com/kcc-ama-series-episode-5-padd-finance-next-generation-launchpad-and-kcc-d4f432719a74',
       url_en:
-        'https://kccofficial.medium.com/kcc-ama-series-episode-5-padd-finance-next-generation-launchpad-and-kcc-d4f432719a74',
+        'https://kccofficial.medium.com/kcc-ama-series-episode-5-padd-finance-next-generation-launchpad-and-kcc-d4f432719a74'
     },
     {
       thumbnail_ch: require('../../assets/images/activity/mojitoswap-cn.png').default,
       thumbnail_en: require('../../assets/images/activity/mojitoswap-en.png').default,
       deadline: '2021/09/10 10:57:33',
       url_ch: 'https://medium.com/@mojitoswap/ama-recap-mojitoswap-growth-and-plans-1e676361df85',
-      url_en: 'https://medium.com/@mojitoswap/ama-recap-mojitoswap-growth-and-plans-1e676361df85',
-    },
+      url_en: 'https://medium.com/@mojitoswap/ama-recap-mojitoswap-growth-and-plans-1e676361df85'
+    }
   ]
 
   const [endedList, setEndedList] = React.useState([])

@@ -43,7 +43,7 @@ const Title = styled.div`
   text-align: center;
   color: #ffffff;
   margin: 0 20px;
-  @media (max-width: 768px) { 
+  @media (max-width: 768px) {
     font-size: 26px;
     margin: 0 8px;
   }
@@ -83,57 +83,54 @@ const ActiveWeekList = [
   {
     logo: require('../../../assets/images/unicorn/mjt-kcc.jpg').default,
     name: 'MojitoSwap',
-    link: 'https://twitter.com/MojitoSwap/status/1524725013156605953?s=20&t=Fwgrx8mPDFyb5GiYCce4Ew',
+    link: 'https://twitter.com/MojitoSwap/status/1524725013156605953?s=20&t=Fwgrx8mPDFyb5GiYCce4Ew'
   },
   {
     logo: require('../../../assets/images/unicorn/open-kcc.png').default,
     name: 'OpenLeverage',
-    link: 'https://openleverage.medium.com/trade-vote-and-share-the-prize-in-kcc-unicorn-contest-f20758d6808c',
+    link: 'https://openleverage.medium.com/trade-vote-and-share-the-prize-in-kcc-unicorn-contest-f20758d6808c'
   },
   {
     logo: require('../../../assets/images/unicorn/tp-kcc.png').default,
     name: 'Token Pocket',
-    link: 'https://www.tokenpocket.pro/',
+    link: 'https://www.tokenpocket.pro/'
   },
   {
     logo: require('../../../assets/images/unicorn/bitkeep-kcc.png').default,
     name: 'Bitkeep',
-    link: 'https://blog.bitkeep.com/en/?p=584',
+    link: 'https://blog.bitkeep.com/en/?p=584'
   },
- {
+  {
     logo: require('../../../assets/images/unicorn/Infinity-kcc.png').default,
     name: 'Infinity Wallet ',
-    link: 'https://twitter.com/InfinityWallet/status/1524708324004012032',
+    link: 'https://twitter.com/InfinityWallet/status/1524708324004012032'
   },
   {
     logo: require('../../../assets/images/unicorn/xhash-kcc.svg').default,
     name: 'XHashtag',
-    link: 'https://medium.com/xhashtag/earn-free-and-a-chance-to-win-kcc-using-our-liquid-staking-vault-as-a-part-of-the-kcc-unicorn-99c3f28d74d1',
+    link: 'https://medium.com/xhashtag/earn-free-and-a-chance-to-win-kcc-using-our-liquid-staking-vault-as-a-part-of-the-kcc-unicorn-99c3f28d74d1'
   },
   {
     logo: require('../../../assets/images/unicorn/nest-kcc.jpg').default,
     name: 'Nest',
-    link: 'https://twitter.com/nest_protocol/status/1512020783098634241?s=20&t=8efbLRuokqfXPq4cf4KrUw',
+    link: 'https://twitter.com/nest_protocol/status/1512020783098634241?s=20&t=8efbLRuokqfXPq4cf4KrUw'
   },
   {
     logo: require('../../../assets/images/unicorn/bithotel-kcc.png').default,
     name: 'BitHotel',
-    link: 'https://medium.com/@bithotelnftgame/kucoin-unicorn-contest-bit-hotel-in-top-10-13d20e6275b6',
+    link: 'https://medium.com/@bithotelnftgame/kucoin-unicorn-contest-bit-hotel-in-top-10-13d20e6275b6'
   },
   {
     logo: require('../../../assets/images/unicorn/kuSwapunic-kcc.png').default,
     name: 'KuSwap',
-    link: 'https://kuswap.finance/#/unicorn',
+    link: 'https://kuswap.finance/#/unicorn'
   },
   {
     logo: require('../../../assets/images/unicorn/saffron-kcc.png').default,
     name: 'Saffron',
-    link: 'https://twitter.com/saffronfinance_/status/1524731974283374592?s=20&t=JetJFfub4l1qIUdkdU6wbg',
-  },
+    link: 'https://twitter.com/saffronfinance_/status/1524731974283374592?s=20&t=JetJFfub4l1qIUdkdU6wbg'
+  }
 
-
-
- 
   // {
 
   // {
@@ -203,7 +200,7 @@ const ActiveWeekList = [
   //   name: 'Pikaster',
   //   link: 'https://app.mojitoswap.finance/nfts/collections/0x420FFeA7CB9d0c06C178a1485478d4C3B29055da',
   // },
-  
+
   // {
   //   logo: require('../../../assets/images/unicorn/armeda-kcc.png').default,
   //   name: 'Armeda',
@@ -289,4 +286,3 @@ const ActiveWeek = () => {
 }
 
 export default ActiveWeek
-

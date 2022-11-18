@@ -10,7 +10,7 @@ export const MAIN_NETWORKS = {
     decimals: 0,
     logo: '',
     bridgeCoreAddress: '',
-    standard: '',
+    standard: ''
   },
   1: {
     name: 'Ethereum',
@@ -24,7 +24,7 @@ export const MAIN_NETWORKS = {
     logo: '/token/chain-1.png',
     bridgeCoreAddress: '0xe61dd9cA7364225aFBFB79e15AD33864424e6aE4',
     standard: 'ERC20',
-    fee: 0.01,
+    fee: 0.01
   },
   321: {
     name: 'KCC-MAINNET',
@@ -37,7 +37,7 @@ export const MAIN_NETWORKS = {
     browser: 'https://explorer.kcc.io',
     logo: '/token/chain-321.png',
     bridgeCoreAddress: '0x7d60D37653c98B38e5fD2a3C0c762dCb276Bc54E',
-    standard: 'KRC20',
+    standard: 'KRC20'
   },
   56: {
     name: 'BSC Mainnet',
@@ -50,7 +50,7 @@ export const MAIN_NETWORKS = {
     browser: 'https://bscscan.com',
     logo: '/token/chain-97.png',
     bridgeCoreAddress: '0x76D1E324757d7E6765df1EcFD6Ba6F20Ca04BB93',
-    standard: 'BEP20',
+    standard: 'BEP20'
   },
   137: {
     name: 'Polygon',
@@ -63,7 +63,7 @@ export const MAIN_NETWORKS = {
     browser: 'https://polygonscan.com/',
     logo: '/token/chain-137.png',
     bridgeCoreAddress: '0xe61dd9cA7364225aFBFB79e15AD33864424e6aE4',
-    standard: 'ERC20',
+    standard: 'ERC20'
   },
   43114: {
     name: 'Avalanche Mainnet',
@@ -76,7 +76,7 @@ export const MAIN_NETWORKS = {
     browser: 'https://snowtrace.io',
     logo: '/token/chain-43114.png',
     bridgeCoreAddress: '0xe61dd9cA7364225aFBFB79e15AD33864424e6aE4',
-    standard: 'ERC20',
+    standard: 'ERC20'
   },
   250: {
     name: 'Fantom Opera',
@@ -89,8 +89,8 @@ export const MAIN_NETWORKS = {
     browser: 'https://ftmscan.com',
     logo: '/token/ftm.png',
     bridgeCoreAddress: '0xe61dd9cA7364225aFBFB79e15AD33864424e6aE4',
-    standard: 'ERC20',
-  },
+    standard: 'ERC20'
+  }
 }
 
 export const TEST_NETWORKS = {
@@ -105,7 +105,7 @@ export const TEST_NETWORKS = {
     decimals: 0,
     logo: '',
     bridgeCoreAddress: '',
-    standard: '',
+    standard: ''
   },
   4: {
     name: 'Rinkeby',
@@ -119,7 +119,7 @@ export const TEST_NETWORKS = {
     logo: '/token/chain-1.png',
     bridgeCoreAddress: '0xA976440272c709C69970A40cb9249BfAa4759A7A',
     standard: 'ERC20',
-    fee: 0.01,
+    fee: 0.01
   },
   322: {
     name: 'KCC-TEST',
@@ -132,7 +132,7 @@ export const TEST_NETWORKS = {
     browser: 'https://scan-testnet.kcc.network',
     logo: '/token/chain-321.png',
     bridgeCoreAddress: '0xA976440272c709C69970A40cb9249BfAa4759A7A',
-    standard: 'KRC20',
+    standard: 'KRC20'
   },
   97: {
     name: 'BSC Testnet',
@@ -145,7 +145,7 @@ export const TEST_NETWORKS = {
     browser: 'https://testnet.bscscan.com',
     logo: '/token/chain-97.png',
     bridgeCoreAddress: '0x0734ce7Df4aEa88ce7fA6AD88bd2EB8d933ee319',
-    standard: 'BEP20',
+    standard: 'BEP20'
   },
   43113: {
     name: 'Avalanche Testnet',
@@ -158,7 +158,7 @@ export const TEST_NETWORKS = {
     browser: 'https://testnet.snowtrace.io',
     logo: '/token/chain-43113.png',
     bridgeCoreAddress: '0x0734ce7Df4aEa88ce7fA6AD88bd2EB8d933ee319',
-    standard: 'ERC20',
+    standard: 'ERC20'
   },
   80001: {
     name: 'Polygon Testnet',
@@ -171,7 +171,7 @@ export const TEST_NETWORKS = {
     browser: 'https://mumbai.polygonscan.com',
     logo: '/token/chain-137.png',
     bridgeCoreAddress: '0x5e1cB1f92861F321FC363e890706dd86a4d3Fa24',
-    standard: 'ERC20',
+    standard: 'ERC20'
   },
   4002: {
     name: 'Fantom Testnet',
@@ -184,8 +184,8 @@ export const TEST_NETWORKS = {
     browser: 'https://testnet.ftmscan.com',
     logo: '/token/ftm.png',
     bridgeCoreAddress: '0x0734ce7Df4aEa88ce7fA6AD88bd2EB8d933ee319',
-    standard: 'ERC20',
-  },
+    standard: 'ERC20'
+  }
 }
 
 export const networks = process.env.REACT_APP_NETWORK === 'main' ? MAIN_NETWORKS : TEST_NETWORKS

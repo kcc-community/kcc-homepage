@@ -40,7 +40,7 @@ export default function MFooter() {
           en: 'en-us',
           'zh-CN': 'zh-cn',
           'es-ES': 'es-es',
-          'de-DE': 'de-de',
+          'de-DE': 'de-de'
         }
         // Open the corresponding document address according to the current language
         const anchor = t(navText).trimLeft().trimRight().replaceAll(' ', '-').toLowerCase()

@@ -139,7 +139,7 @@ const ChainCard: React.FunctionComponent<ChainCardProps> = ({
   direction,
   currency,
   setDropdownShow,
-  dropdownShow,
+  dropdownShow
 }) => {
   const network = React.useMemo(() => {
     return getNetworkInfo(networkId)

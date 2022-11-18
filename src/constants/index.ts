@@ -27,161 +27,161 @@ export const KCC = {
     {
       app: 'Twitter',
       icon: require('../assets/images/Icons/app/twitter-logo@2x.png').default,
-      route: 'https://twitter.com/KCCOfficialTW',
+      route: 'https://twitter.com/KCCOfficialTW'
     },
     {
       app: 'Telegram',
       icon: require('../assets/images/Icons/app/telegram-logo@2x.png').default,
-      route: 'https://t.me/KCCOfficialEnglishCommunity',
+      route: 'https://t.me/KCCOfficialEnglishCommunity'
     },
     {
       app: 'Github',
       icon: require('../assets/images/Icons/app/github-logo@2x.png').default,
-      route: 'https://github.com/kcc-community',
+      route: 'https://github.com/kcc-community'
     },
     {
       app: 'Discord',
       icon: require('../assets/images/Icons/app/discord-logo@2x.png').default,
-      route: 'https://discord.com/invite/H5ucJydSyd',
-    },
+      route: 'https://discord.com/invite/H5ucJydSyd'
+    }
   ],
   MILESTONES: [
     {
       date: '2021-04-28',
       title: 'Milestone 1',
-      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+      icon: require('../assets/images/home/milestone-icon@2x.png').default
     },
     {
       date: '2021-06-16',
       title: 'Milestone 2',
-      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+      icon: require('../assets/images/home/milestone-icon@2x.png').default
     },
     {
       date: '2021-06-18',
       title: 'Milestone 3',
-      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+      icon: require('../assets/images/home/milestone-icon@2x.png').default
     },
     {
       date: '2021-06-25',
       title: 'KCC Ambassador Program',
-      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+      icon: require('../assets/images/home/milestone-icon@2x.png').default
     },
     {
       date: '2021-07-16',
       title: 'KCC Bridge Launched',
-      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+      icon: require('../assets/images/home/milestone-icon@2x.png').default
     },
     {
       date: '2021-09-24',
       title: 'KCC GoDAO Foundation Registered',
-      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+      icon: require('../assets/images/home/milestone-icon@2x.png').default
     },
     {
       date: '2021-09-27',
       title: 'Discover Launched',
-      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+      icon: require('../assets/images/home/milestone-icon@2x.png').default
     },
     {
       date: '2021-10-21',
       title: 'GoDAO Launched',
-      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+      icon: require('../assets/images/home/milestone-icon@2x.png').default
     },
     {
       date: '2021-11-19',
       title: 'Safe.kcc.io Launched',
-      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+      icon: require('../assets/images/home/milestone-icon@2x.png').default
     },
     {
       date: '2022-02-25',
       title: 'Ecosystem Incentive Funds Announced',
-      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+      icon: require('../assets/images/home/milestone-icon@2x.png').default
     },
     {
       date: '2022-03-15',
       title: 'First Hackathon Kicked Off',
-      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+      icon: require('../assets/images/home/milestone-icon@2x.png').default
     },
     {
       date: '2022-03-29',
       title: 'Co-release KCS Whitepaper',
-      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+      icon: require('../assets/images/home/milestone-icon@2x.png').default
     },
     {
       date: '2022-06-16',
       title: 'KCC Validator Election Launched',
-      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+      icon: require('../assets/images/home/milestone-icon@2x.png').default
     },
     {
       date: '2022-06-24',
       title: 'KCC Mainnet Ishikari Hardfork Upgrade',
-      icon: require('../assets/images/home/milestone-icon@2x.png').default,
+      icon: require('../assets/images/home/milestone-icon@2x.png').default
     },
     {
       date: 'Coming Soon...',
-      title: '',
-    },
+      title: ''
+    }
   ],
   PARTNER_LIST: [
     {
       name: 'KuCoin',
       logo: require('../assets/images/home/kucoin.png').default,
-      route: 'https://www.kucoin.com/',
+      route: 'https://www.kucoin.com/'
     },
     {
       name: 'KucoinVentures',
       logo: require('../assets/images/home/kucoinventures.png').default,
-      route: 'https://www.kucoin.com/kucoin-ventures',
+      route: 'https://www.kucoin.com/kucoin-ventures'
     },
     {
       name: 'Kucoinlabs',
       logo: require('../assets/images/home/kucoinlab.png').default,
-      route: 'https://www.kucoin.com/land/kucoinlabs',
+      route: 'https://www.kucoin.com/land/kucoinlabs'
     },
     {
       name: 'KuCoin Wallet',
       logo: require('../assets/images/home/kucoin-wallet.png').default,
-      route: 'https://www.kuwallet.com',
+      route: 'https://www.kuwallet.com'
     },
     {
       name: 'TokenView',
       logo: require('../assets/images/home/tokenview.png').default,
-      route: 'https://tokenview.com/en',
+      route: 'https://tokenview.com/en'
     },
     {
       name: 'Conflux',
       logo: require('../assets/images/home/conflux.png').default,
-      route: 'https://confluxnetwork.org/',
+      route: 'https://confluxnetwork.org/'
     },
     {
       name: 'Hashed',
       logo: require('../assets/images/home/hashed.png').default,
-      route: 'https://www.hashed.com/',
+      route: 'https://www.hashed.com/'
     },
     {
       name: 'Hashkey',
       logo: require('../assets/images/home/hashkey.png').default,
-      route: 'https://www.hashkey.com/',
+      route: 'https://www.hashkey.com/'
     },
     {
       name: 'maven',
       logo: require('../assets/images/home/maven.png').default,
-      route: 'https://www.mavencp.com/',
+      route: 'https://www.mavencp.com/'
     },
     {
       name: 'SkymanVentures',
       logo: require('../assets/images/home/skyman.png').default,
-      route: 'https://www.skymanventures.com',
+      route: 'https://www.skymanventures.com'
     },
     {
       name: 'coinletegraph',
       logo: require('../assets/images/home/Cointelegraph.png').default,
-      route: 'https://cointelegraph.com/',
+      route: 'https://cointelegraph.com/'
     },
 
     {
       name: 'blog',
       logo: require('../assets/images/home/blog.png').default,
-      route: 'https://blogtienao.com/',
+      route: 'https://blogtienao.com/'
     },
     // {
     //   name: 'nest',
@@ -192,32 +192,32 @@ export const KCC = {
     {
       name: 'Sharding Capital',
       logo: require('../assets/images/home/sharding.png').default,
-      route: 'https://www.sharding.capital/',
+      route: 'https://www.sharding.capital/'
     },
     {
       name: 'Shima Capital',
       logo: require('../assets/images/home/shima.png').default,
-      route: 'https://shima.capital/',
+      route: 'https://shima.capital/'
     },
     {
       name: 'Zonff',
       logo: require('../assets/images/home/zonff.png').default,
-      route: 'https://www.zonff.partners/#/home',
+      route: 'https://www.zonff.partners/#/home'
     },
     {
       name: 'Axis Ventures',
       logo: require('../assets/images/home/Axis.png').default,
-      route: 'https://www.axis.ventures/',
+      route: 'https://www.axis.ventures/'
     },
     {
       name: 'AC Capital',
       logo: require('../assets/images/home/ac.png').default,
-      route: 'https://www.accapital.io/',
+      route: 'https://www.accapital.io/'
     },
     {
       name: 'Web3Port',
       logo: require('../assets/images/home/web3.png').default,
-      route: 'https://www.web3port.us/',
-    },
-  ],
+      route: 'https://www.web3port.us/'
+    }
+  ]
 }

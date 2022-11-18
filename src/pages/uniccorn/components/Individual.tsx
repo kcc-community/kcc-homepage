@@ -19,7 +19,7 @@ const ListCon = styled.div<{ name?: string }>`
   display: flex;
   flex-wrap: wrap;
   justify-content: ${({ name }) => {
-    return name === "topTen" ? "center" : "flex-start"
+    return name === 'topTen' ? 'center' : 'flex-start'
   }};
   text-align: center;
   align-items: center;
@@ -65,72 +65,71 @@ const awardsList = [
   {
     logo: require('../../../assets/images/unicorn/mojito.png').default,
     name: 'MojitoSwap',
-    link: 'https://app.mojitoswap.finance/',
+    link: 'https://app.mojitoswap.finance/'
   },
   {
     logo: require('../../../assets/images/unicorn/openLeverage.png').default,
     name: 'OpenLeverage',
-    link: 'https://openleverage.finance/',
+    link: 'https://openleverage.finance/'
   },
 
   {
     logo: require('../../../assets/images/unicorn/tokenPocket.png').default,
     name: 'Token Pocket',
-    link: 'https://www.tokenpocket.pro/',
+    link: 'https://www.tokenpocket.pro/'
   },
   {
     logo: require('../../../assets/images/unicorn/bitkeep.png').default,
     name: 'Bitkeep',
-    link: 'https://bitkeep.com/',
+    link: 'https://bitkeep.com/'
   },
   {
     logo: require('../../../assets/images/unicorn/infinity.png').default,
     name: 'Infinity Wallet',
-    link: 'https://infinitywallet.io/',
+    link: 'https://infinitywallet.io/'
   },
   {
     logo: require('../../../assets/images/unicorn/hashtag.png').default,
     name: 'XHashtag',
-    link: 'https://www.xhashtag.io/',
+    link: 'https://www.xhashtag.io/'
   },
   {
     logo: require('../../../assets/images/unicorn/nest.png').default,
     name: 'Nest',
-    link: '	https://nestprotocol.org',
+    link: '	https://nestprotocol.org'
   },
   {
     logo: require('../../../assets/images/unicorn/bithotel.png').default,
     name: 'bitHotel',
-    link: '	https://bithotel.io/#/',
+    link: '	https://bithotel.io/#/'
   },
   {
     logo: require('../../../assets/images/unicorn/kuSwap.png').default,
     name: 'KuSwap',
-    link: 'https://kuswap.finance/#/swap',
+    link: 'https://kuswap.finance/#/swap'
   },
   {
     logo: require('../../../assets/images/unicorn/saffron.png').default,
     name: 'saffron',
-    link: 'https://kcc.saffron.finance/#home',
-  },
-
+    link: 'https://kcc.saffron.finance/#home'
+  }
 ]
 
 const Desc = styled.div`
-font-family: 'SF Pro Text';
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 32px;
-margin-top: 59px;
-max-width: 1152px;
-text-align: center;
-/* or 178% */
-@media (max-width: 768px) {
-  margin-top: 30px;
-  padding: 0 33px;
-  font-size: 14px;
-}
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+  margin-top: 59px;
+  max-width: 1152px;
+  text-align: center;
+  /* or 178% */
+  @media (max-width: 768px) {
+    margin-top: 30px;
+    padding: 0 33px;
+    font-size: 14px;
+  }
 `
 const UnicornTitleWrap = styled.div`
   width: 100%;
@@ -166,20 +165,19 @@ const UnicornTitle: FunctionComponent<{ title: string; color?: string }> = ({ ti
   )
 }
 
-
 interface Props {
-  title?: string,
+  title?: string
   name?: string
 }
 const Individual: React.FunctionComponent<Props> = ({ title, name }) => {
-  console.log("title::", title);
+  console.log('title::', title)
 
   return (
     <Content>
-      <UnicornTitle title={title ? title : "Grand Prize Awards "} />
-      <GrandPrize/>
-      <AwardsInde/>
-      <AwardsIndi/>
+      <UnicornTitle title={title ? title : 'Grand Prize Awards '} />
+      <GrandPrize />
+      <AwardsInde />
+      <AwardsIndi />
     </Content>
   )
 }

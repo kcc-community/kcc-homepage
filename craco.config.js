@@ -14,19 +14,19 @@ module.exports = {
             modifyVars: {
               '@primary-color': '#31D7A0',
               '@link-color': '#0fcd8c',
-              '@logo-color': '#39E1A4',
+              '@logo-color': '#39E1A4'
             },
-            javascriptEnabled: true,
-          },
-        },
-      },
-    },
+            javascriptEnabled: true
+          }
+        }
+      }
+    }
   ],
   webpack: {
     alias: {
       'bn.js': path.resolve(process.cwd(), 'node_modules', 'bn.js'),
       'sha3.js': path.resolve(process.cwd(), 'node_modules', 'js-sha3.js'),
-      'bignumber.js': path.resolve(process.cwd(), 'node_modules', 'bignumber.js'),
+      'bignumber.js': path.resolve(process.cwd(), 'node_modules', 'bignumber.js')
     },
     configure: (config) => {
       config.devtool = process.env.NODE_ENV === 'production' ? false : 'source-map'
@@ -44,75 +44,75 @@ module.exports = {
               bn: {
                 name: 'bn.js',
                 test: /[\\/]node_modules[\\/][a-zA-Z]*bn.js[\\/]/,
-                priority: 100,
+                priority: 100
               },
               bignumber: {
                 name: 'bignumber.js',
                 test: /[\\/]node_modules[\\/]bignumber.js[\\/]/,
-                priority: 100,
+                priority: 100
               },
               styledcomponent: {
                 name: 'styled-component',
                 test: /[\\/]node_modules[\\/]styled-component[\\/]/,
-                priority: 60,
+                priority: 60
               },
               lodash: {
                 name: 'lodash',
                 test: /[\\/]node_modules[\\/]lodash[\\/]/,
-                priority: 80,
+                priority: 80
               },
               moment: {
                 name: 'moment',
                 test: /[\\/]node_modules[\\/]moment[\\/]/,
-                priority: 80,
+                priority: 80
               },
               reactdom: {
                 name: 'react-dom',
                 test: /[\\/]node_modules[\\/]react-dom[\\/]/,
-                priority: 80,
+                priority: 80
               },
               reactrouterdom: {
                 name: 'react-router-dom',
                 test: /[\\/]node_modules[\\/]react-router-dom[\\/]/,
-                priority: 60,
+                priority: 60
               },
               web3: {
                 name: 'web3',
                 test: /[\\/]node_modules[\\/]web3[\\/]/,
-                priority: 40,
+                priority: 40
               },
               ethersproject: {
                 name: 'ethersproject',
                 test: /[\\/]node_modules[\\/]\@ethersproject[\\/]/,
-                priority: 40,
+                priority: 40
               },
               ethereumjs: {
                 name: 'ethereumjs',
                 test: /[\\/]node_modules[\\/]ethereumjs-[a-zA-Z]*[\\/]/,
-                priority: 40,
+                priority: 40
               },
               antd: {
                 name: 'antd',
                 test: /[\\/]node_modules[\\/]antd[\\/]/,
-                priority: 40,
+                priority: 40
               },
               antdesign: {
                 name: '@ant-design',
                 test: /[\\/]node_modules[\\/]@ant-design[\\/]/,
-                priority: 40,
+                priority: 40
               },
               idna: {
                 name: 'idna-uts46-hx',
                 test: /[\\/]node_modules[\\/]idna-uts46-hx[\\/]/,
-                priority: 90,
+                priority: 90
               },
               sha3: {
                 name: 'sha3',
                 test: /[\\/]node_modules[\\/]js-sha3[\\/]/,
-                priority: 90,
-              },
-            },
-          },
+                priority: 90
+              }
+            }
+          }
         }
       }
       return config
@@ -130,14 +130,14 @@ module.exports = {
               compress: {
                 drop_console: process.env.NODE_ENV === 'production',
                 drop_debugger: true,
-                pure_funcs: process.env.NODE_ENV === 'production' ? ['console.log'] : '',
-              },
-            },
-          }),
+                pure_funcs: process.env.NODE_ENV === 'production' ? ['console.log'] : ''
+              }
+            }
+          })
         ],
         []
       ),
-      ...when(process.env.NETWORK === 'analysis', () => [new BundleAnalyzerPlugin()], []),
-    ],
-  },
+      ...when(process.env.NETWORK === 'analysis', () => [new BundleAnalyzerPlugin()], [])
+    ]
+  }
 }

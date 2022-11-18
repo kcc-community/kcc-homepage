@@ -16,7 +16,7 @@ const ListCon = styled.div<{ name?: string }>`
   display: flex;
   flex-wrap: wrap;
   justify-content: ${({ name }) => {
-    return name === "topTen" ? "center" : "flex-start"
+    return name === 'topTen' ? 'center' : 'flex-start'
   }};
   text-align: center;
   align-items: center;
@@ -62,244 +62,242 @@ const topTenList = [
   {
     logo: require('../../../assets/images/unicorn/mojito.png').default,
     name: 'MojitoSwap',
-    link: 'https://app.mojitoswap.finance/',
+    link: 'https://app.mojitoswap.finance/'
   },
   {
     logo: require('../../../assets/images/unicorn/openLeverage.png').default,
     name: 'OpenLeverage',
-    link: 'https://openleverage.finance/',
+    link: 'https://openleverage.finance/'
   },
 
   {
     logo: require('../../../assets/images/unicorn/tokenPocket.png').default,
     name: 'Token Pocket',
-    link: 'https://www.tokenpocket.pro/',
+    link: 'https://www.tokenpocket.pro/'
   },
   {
     logo: require('../../../assets/images/unicorn/bitkeep.png').default,
     name: 'Bitkeep',
-    link: 'https://bitkeep.com/',
+    link: 'https://bitkeep.com/'
   },
   {
     logo: require('../../../assets/images/unicorn/infinity.png').default,
     name: 'Infinity Wallet',
-    link: 'https://infinitywallet.io/',
+    link: 'https://infinitywallet.io/'
   },
   {
     logo: require('../../../assets/images/unicorn/hashtag.png').default,
     name: 'XHashtag',
-    link: 'https://www.xhashtag.io/',
+    link: 'https://www.xhashtag.io/'
   },
   {
     logo: require('../../../assets/images/unicorn/nest.png').default,
     name: 'Nest',
-    link: '	https://nestprotocol.org',
+    link: '	https://nestprotocol.org'
   },
   {
     logo: require('../../../assets/images/unicorn/bithotel.png').default,
     name: 'bitHotel',
-    link: '	https://bithotel.io/#/',
+    link: '	https://bithotel.io/#/'
   },
   {
     logo: require('../../../assets/images/unicorn/kuSwap.png').default,
     name: 'KuSwap',
-    link: 'https://kuswap.finance/#/swap',
+    link: 'https://kuswap.finance/#/swap'
   },
   {
     logo: require('../../../assets/images/unicorn/saffron.png').default,
     name: 'saffron',
-    link: 'https://kcc.saffron.finance/#home',
-  },
-
+    link: 'https://kcc.saffron.finance/#home'
+  }
 ]
 
 const partnerList = [
   {
     logo: require('../../../assets/images/unicorn/kupay.png').default,
     name: 'KuPay',
-    link: 'https://kupay.finance/',
+    link: 'https://kupay.finance/'
   },
   {
     logo: require('../../../assets/images/unicorn/pikaster.png').default,
     name: 'Pikaster',
-    link: 'https://www.pikaster.com/',
+    link: 'https://www.pikaster.com/'
   },
   {
     logo: require('../../../assets/images/unicorn/swap.png').default,
     name: 'Transit Finance',
-    link: 'https://swap.transit.finance/#/',
+    link: 'https://swap.transit.finance/#/'
   },
   {
     logo: require('../../../assets/images/unicorn/pencilDao.png').default,
     name: 'PencilDAO',
-    link: 'https://www.pencildao.com/staking.html#lomen-staking',
+    link: 'https://www.pencildao.com/staking.html#lomen-staking'
   },
   {
     logo: require('../../../assets/images/unicorn/boringDao.png').default,
     name: 'BoringDAO',
-    link: 'https://www.boringdao.com/',
+    link: 'https://www.boringdao.com/'
   },
   {
     logo: require('../../../assets/images/unicorn/ambire.png').default,
     name: 'Ambire Wallet',
-    link: 'https://www.ambire.com/',
+    link: 'https://www.ambire.com/'
   },
   {
     logo: require('../../../assets/images/unicorn/treasureland.png').default,
     name: 'Treasureland',
-    link: 'https://treasureland.market/',
+    link: 'https://treasureland.market/'
   },
-
 
   {
     logo: require('../../../assets/images/unicorn/ball.png').default,
     name: 'Crypto Elite’s Battlegrounds(CEBG)',
-    link: 'https://linktr.ee/cebggames',
+    link: 'https://linktr.ee/cebggames'
   },
   {
     logo: require('../../../assets/images/unicorn/coolmin.png').default,
     name: 'Coolmining',
-    link: 'https://coolmining.io/',
+    link: 'https://coolmining.io/'
   },
   {
     logo: require('../../../assets/images/unicorn/poly.png').default,
     name: 'Poly Network',
-    link: 'https://poly.network/#/',
+    link: 'https://poly.network/#/'
   },
   {
     logo: require('../../../assets/images/unicorn/nash.png').default,
     name: 'Nash Metaverse',
-    link: 'https://www.nashmetaverse.xyz/',
+    link: 'https://www.nashmetaverse.xyz/'
   },
   {
     logo: require('../../../assets/images/unicorn/stoneage.png').default,
     name: 'IdleStoneAge / SAX',
-    link: 'https://www.idlestoneage.com/',
+    link: 'https://www.idlestoneage.com/'
   },
   {
     logo: require('../../../assets/images/unicorn/kuDoge.png').default,
     name: 'KuDoge',
-    link: 'https://kudoge.io/home',
+    link: 'https://kudoge.io/home'
   },
   {
     logo: require('../../../assets/images/unicorn/killSwitch.png').default,
     name: 'KillSwitch',
-    link: 'https://killswitch.finance/',
+    link: 'https://killswitch.finance/'
   },
   {
     logo: require('../../../assets/images/unicorn/vixen.png').default,
     name: 'VixenPunks',
-    link: 'https://discord.gg/uWaW9HqjAu',
+    link: 'https://discord.gg/uWaW9HqjAu'
   },
   {
     logo: require('../../../assets/images/unicorn/fort.png').default,
     name: 'FORT Protocol',
-    link: 'https://fortprotocol.com/',
+    link: 'https://fortprotocol.com/'
   },
   {
     logo: require('../../../assets/images/unicorn/guru.png').default,
     name: 'Guru Network',
-    link: 'https://kcc.guru/',
+    link: 'https://kcc.guru/'
   },
   {
     logo: require('../../../assets/images/unicorn/amara.png').default,
     name: 'Amara Finance',
-    link: 'https://www.amara.link/',
+    link: 'https://www.amara.link/'
   },
   {
     logo: require('../../../assets/images/unicorn/dexTools.png').default,
     name: 'Dextools',
-    link: 'https://www.dextools.io/',
+    link: 'https://www.dextools.io/'
   },
   {
     logo: require('../../../assets/images/unicorn/light.png').default,
     name: 'Light DeFi',
-    link: 'https://lightdefi.org/',
+    link: 'https://lightdefi.org/'
   },
   {
     logo: require('../../../assets/images/unicorn/emiSwap.png').default,
     name: 'EmiSwap',
-    link: 'https://emiswap.com/main',
+    link: 'https://emiswap.com/main'
   },
   {
     logo: require('../../../assets/images/unicorn/kuCake.png').default,
     name: 'KuCake',
-    link: 'https://kucake.com/#/',
+    link: 'https://kucake.com/#/'
   },
   {
     logo: require('../../../assets/images/unicorn/bridge.png').default,
     name: 'Bridge',
-    link: 'https://www.bridgenetwork.com/',
+    link: 'https://www.bridgenetwork.com/'
   },
   {
     logo: require('../../../assets/images/unicorn/lend.png').default,
     name: 'Oxlend',
-    link: 'https://www.0xlend.io/#/market',
+    link: 'https://www.0xlend.io/#/market'
   },
   {
     logo: require('../../../assets/images/unicorn/alend.png').default,
     name: 'Alend',
-    link: 'https://app.alend.xyz/',
+    link: 'https://app.alend.xyz/'
   },
   {
     logo: require('../../../assets/images/unicorn/organix.png').default,
     name: 'Organix',
-    link: 'https://www.ogx.network/#/',
+    link: 'https://www.ogx.network/#/'
   },
   {
     logo: require('../../../assets/images/unicorn/sumer.png').default,
     name: 'Sumer.money',
-    link: 'https://app.sumer.money/',
+    link: 'https://app.sumer.money/'
   },
   {
     logo: require('../../../assets/images/unicorn/killbox.png').default,
     name: 'The Killbox Game',
-    link: 'https://www.thekillboxgame.com/',
+    link: 'https://www.thekillboxgame.com/'
   },
   {
     logo: require('../../../assets/images/unicorn/dcent.png').default,
     name: "D'Cent Wallet",
-    link: 'https://dcentwallet.com/MobileApp',
+    link: 'https://dcentwallet.com/MobileApp'
   },
   {
     logo: require('../../../assets/images/unicorn/nabox.png').default,
     name: 'Nabox',
-    link: 'https://nabox.io/',
+    link: 'https://nabox.io/'
   },
   {
     logo: require('../../../assets/images/unicorn/turboStarter.png').default,
     name: 'TurboStarter',
-    link: 'https://app.turbostarter.io',
+    link: 'https://app.turbostarter.io'
   },
   {
     logo: require('../../../assets/images/unicorn/coinhub.png').default,
     name: 'Coinhub Wallet',
-    link: 'https://www.coinhub.org/',
+    link: 'https://www.coinhub.org/'
   },
   {
     logo: require('../../../assets/images/unicorn/tatum.png').default,
     name: 'Tatum',
-    link: 'https://tatum.io/',
+    link: 'https://tatum.io/'
   },
   {
     logo: require('../../../assets/images/unicorn/popworld.png').default,
     name: 'Popop World',
-    link: 'https://www.popop.world/',
+    link: 'https://www.popop.world/'
   },
   {
     logo: require('../../../assets/images/unicorn/fabwelt.png').default,
     name: 'Fabwelt',
-    link: 'http://www.fabwelt.com/',
+    link: 'http://www.fabwelt.com/'
   },
   {
     logo: require('../../../assets/images/unicorn/rush.png').default,
     name: 'xrush',
-    link: 'https://www.xrush.io/',
+    link: 'https://www.xrush.io/'
   },
   {
     logo: require('../../../assets/images/unicorn/myMetaFarm.png').default,
     name: 'My Meta Farm',
-    link: 'https://mymetafarm.com/',
+    link: 'https://mymetafarm.com/'
   }
 ]
 
@@ -337,28 +335,24 @@ const UnicornTitle: FunctionComponent<{ title: string; color?: string }> = ({ ti
   )
 }
 
-
 interface Props {
-  title?: string,
+  title?: string
   name?: string
 }
 const participantPro: React.FunctionComponent<Props> = ({ title, name }) => {
-  console.log("title::", title);
+  console.log('title::', title)
 
   return (
-
     <Content>
-      <UnicornTitle title={title ? title : "Participating Projects"} />
+      <UnicornTitle title={title ? title : 'Participating Projects'} />
       <ListCon name={name}>
-        {
-          (name === "topTen" ? topTenList : partnerList).map((item, index) => {
-            return (
-              <ListItem name={name} key={index} href={item.link} target="_blank">
-                <Image src={item.logo}></Image>
-              </ListItem>
-            )
-          })
-        }
+        {(name === 'topTen' ? topTenList : partnerList).map((item, index) => {
+          return (
+            <ListItem name={name} key={index} href={item.link} target="_blank">
+              <Image src={item.logo}></Image>
+            </ListItem>
+          )
+        })}
       </ListCon>
     </Content>
   )

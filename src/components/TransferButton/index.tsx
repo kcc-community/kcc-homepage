@@ -62,7 +62,7 @@ const TransferButton: React.FunctionComponent<TransferButtonProps> = ({
   checkList,
   pairId,
   amount,
-  bridgeStatus,
+  bridgeStatus
 }) => {
   const { t } = useTranslation()
   const { account } = useWeb3React()

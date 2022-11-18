@@ -34,7 +34,7 @@ export function useTokenList(): Currency[] {
           symbol: src.currency,
           name: src?.name,
           logoUrl: src.logoUrl,
-          decimals: src.decimals,
+          decimals: src.decimals
         }
         token.push(currency)
       }

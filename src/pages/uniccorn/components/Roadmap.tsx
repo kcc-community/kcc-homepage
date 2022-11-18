@@ -148,28 +148,28 @@ const DateSubText = styled.div<{ index: number }>`
 const roadmapList = [
   {
     date: 'March 2nd - March 14th',
-    text: 'Warm-up & Marketing',
+    text: 'Warm-up & Marketing'
   },
   {
     date: 'March 15th - April 17th',
-    text: 'Submission & Technical integration',
+    text: 'Submission & Technical integration'
   },
   {
     date: 'April 18th - May 8th',
-    text: 'Project Contest',
+    text: 'Project Contest'
   },
   {
     date: 'May 9th - May 12th',
-    text: 'Overall Top 10 and some individual award & prize-winning projects announced',
+    text: 'Overall Top 10 and some individual award & prize-winning projects announced'
   },
   {
     date: 'May 25th - May 27th',
-    text: 'Community voting for Final Top 5 ranked projects on snapshot.eth',
+    text: 'Community voting for Final Top 5 ranked projects on snapshot.eth'
   },
   {
     date: 'May 27th',
-    text: 'Grant Prize Winning Projects Announced',
-  },
+    text: 'Grant Prize Winning Projects Announced'
+  }
 ]
 
 const Roadmap = () => {

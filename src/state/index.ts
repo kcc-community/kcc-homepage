@@ -24,10 +24,10 @@ const store = configureStore({
   reducer: {
     application,
     wallet,
-    bridge,
+    bridge
   },
   middleware: [...getDefaultMiddleware({ thunk: false }), save({ states: PERSISTED_KEYS, debounce: 500 })],
-  preloadedState: loadedState,
+  preloadedState: loadedState
 })
 
 export default store

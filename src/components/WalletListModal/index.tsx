@@ -139,7 +139,7 @@ const WalletListModal: React.FunctionComponent<WalletListModalProps> = ({ visibl
         // To make the face follow the mouse.
         followMouse: true,
         // head should slowly drift (overrides lookAt)
-        slowDrift: false,
+        slowDrift: false
       })
       container?.appendChild(viewer.container)
     }

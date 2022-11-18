@@ -1,14 +1,14 @@
 module.exports = {
   globals: {
     ENV_CONFIG: 'readonly',
-    web3: 'readonly',
+    web3: 'readonly'
   },
   settings: {
     'import/resolver': {
       node: {
-        paths: ['./src'],
-      },
-    },
+        paths: ['./src']
+      }
+    }
   },
   parser: '@typescript-eslint/parser',
   rules: {
@@ -35,6 +35,6 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 0,
     'global-require': 0,
     '@typescript-eslint/explicit-module-boundary-types': 0,
-    'no-console': 0,
-  },
+    'no-console': 0
+  }
 }

@@ -15,7 +15,7 @@ const BridgeLoading: React.FunctionComponent<BridgeLoadingProps> = ({ status }) 
           style={{
             color: theme.colors.bridgePrimay,
             fontSize: '50px',
-            animation: 'loadingCircle 1.5s infinite linear',
+            animation: 'loadingCircle 1.5s infinite linear'
           }}
         />
       ) : (

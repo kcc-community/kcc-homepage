@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import ParticipantPro from './Participant'
 import Individual from './Individual'
 
-
 const ActiveWrap = styled.div`
   padding-top: 168px;
   @media (max-width: 768px) {
@@ -21,7 +20,6 @@ const Content = styled.div`
   text-align: center;
   align-items: center;
 `
-
 
 const UnicornTitleWrap = styled.div`
   width: 100%;
@@ -72,7 +70,7 @@ const UnicornReverseIcon = styled.img`
   }
 `
 
-const UnicornTitle: FunctionComponent<{ title: string; color?: string }> = ({ title, color}) => {
+const UnicornTitle: FunctionComponent<{ title: string; color?: string }> = ({ title, color }) => {
   const url = color
     ? require('../../../assets/images/unicorn/blue-unicorn.png').default
     : require('../../../assets/images/unicorn/green-unicorn.png').default
@@ -90,11 +88,10 @@ const ExperienceWeek = () => {
     <ActiveWrap>
       <Content>
         <UnicornTitle title="KCC Unicorn Contest Winners Revealed" />
-         <Individual />
-        <ParticipantPro title="Top 10 Projects" name="topTen"/>
+        <Individual />
+        <ParticipantPro title="Top 10 Projects" name="topTen" />
         {/* <ParticipantPro /> */}
       </Content>
-     
     </ActiveWrap>
   )
 }

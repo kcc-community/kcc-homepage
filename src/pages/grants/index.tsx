@@ -179,7 +179,7 @@ const GrantsPage: React.FunctionComponent<GrantsPageProps> = () => {
               style={{
                 marginTop: isMobile ? '87px' : '24px',
                 width: isMobile ? '160px' : '145px',
-                height: isMobile ? '48px' : '36px',
+                height: isMobile ? '48px' : '36px'
               }}
               onClick={nav2Grants}
             >
@@ -199,14 +199,14 @@ const GrantsPage: React.FunctionComponent<GrantsPageProps> = () => {
               flexFlow: isMobile ? 'column wrap' : 'row nowrap',
               alignItems: 'center',
               justifyContent: isMobile ? 'center' : 'space-between',
-              padding: isMobile ? '0 24px' : '0',
+              padding: isMobile ? '0 24px' : '0'
             }}
           >
             <Column
               style={{
                 order: isMobile ? 1 : 0,
                 marginTop: isMobile ? '50px' : '0',
-                alignSelf: isMobile ? 'flex-start' : 'center',
+                alignSelf: isMobile ? 'flex-start' : 'center'
               }}
             >
               <ParagraphText style={{ width: isMobile ? 'auto' : '480px', fontSize: isMobile ? '14px' : '20px' }}>
@@ -227,7 +227,7 @@ const GrantsPage: React.FunctionComponent<GrantsPageProps> = () => {
                 background: 'rgba(151, 208, 195, 0.21)',
                 justifyContent: 'center',
                 padding: '0px 0px',
-                order: isMobile ? 0 : 1,
+                order: isMobile ? 0 : 1
               }}
             >
               <NumberText>10+</NumberText>
@@ -241,7 +241,7 @@ const GrantsPage: React.FunctionComponent<GrantsPageProps> = () => {
               alignItems: isMobile ? 'center' : 'stretch',
               justifyContent: isMobile ? 'center' : 'space-between',
               flexFlow: isMobile ? 'column wrap' : 'row nowrap',
-              padding: isMobile ? '0 24px' : '0',
+              padding: isMobile ? '0 24px' : '0'
             }}
           >
             <ColumnCenter
@@ -250,7 +250,7 @@ const GrantsPage: React.FunctionComponent<GrantsPageProps> = () => {
                 height: isMobile ? '240px' : 'auto',
                 background: 'rgba(151, 208, 195, 0.21)',
                 justifyContent: 'center',
-                alignItems: 'center',
+                alignItems: 'center'
               }}
             >
               <ColumnCenter>
@@ -262,7 +262,7 @@ const GrantsPage: React.FunctionComponent<GrantsPageProps> = () => {
               style={{
                 width: isMobile ? 'auto' : '610px',
                 marginTop: isMobile ? '24px' : '0',
-                paddingLeft: isTablet ? '24px' : '0px',
+                paddingLeft: isTablet ? '24px' : '0px'
               }}
             >
               <Row>

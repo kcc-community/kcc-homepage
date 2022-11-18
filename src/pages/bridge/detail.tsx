@@ -177,7 +177,7 @@ const BridgeDetailPage: React.FunctionComponent<BridgeDetailPageProps> = (props)
     const selectedPairInfo = getPairInfo(order?.pairId as any)
     return {
       src: getNetworkInfo(selectedPairInfo?.srcChainInfo.chainId as any),
-      dist: getNetworkInfo(selectedPairInfo?.dstChainInfo.chainId as any),
+      dist: getNetworkInfo(selectedPairInfo?.dstChainInfo.chainId as any)
     }
   }, [order])
 
@@ -285,7 +285,7 @@ const BridgeDetailPage: React.FunctionComponent<BridgeDetailPageProps> = (props)
               status="active"
               strokeColor={{
                 '0%': '#00FFA8',
-                '100%': '#31D7A0',
+                '100%': '#31D7A0'
               }}
             />
             <CenterRow>
@@ -317,7 +317,7 @@ const BridgeDetailPage: React.FunctionComponent<BridgeDetailPageProps> = (props)
               status="active"
               strokeColor={{
                 '0%': '#00FFA8',
-                '100%': '#31D7A0',
+                '100%': '#31D7A0'
               }}
             />
             <CenterRow>

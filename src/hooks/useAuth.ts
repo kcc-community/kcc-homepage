@@ -2,11 +2,11 @@ import { useCallback } from 'react'
 import { useWeb3React, UnsupportedChainIdError } from '@web3-react/core'
 import {
   NoEthereumProviderError,
-  UserRejectedRequestError as UserRejectedRequestErrorInjected,
+  UserRejectedRequestError as UserRejectedRequestErrorInjected
 } from '@web3-react/injected-connector'
 import {
   UserRejectedRequestError as UserRejectedRequestErrorWalletConnect,
-  WalletConnectConnector,
+  WalletConnectConnector
 } from '@web3-react/walletconnect-connector'
 import { connectorLocalStorageKey, ConnectorNames } from '../constants/wallet'
 import { notification } from 'antd'
@@ -35,7 +35,7 @@ const useAuth = () => {
         } else if (error instanceof NoEthereumProviderError) {
           notification.error({
             message: i18next.t('Provider Error'),
-            description: i18next.t('No provider was found'),
+            description: i18next.t('No provider was found')
           })
           dispatch(updateErrorInfo({ hasError: true, errorInfo: 'Provider Error' }))
         } else if (
@@ -48,13 +48,13 @@ const useAuth = () => {
           }
           notification.error({
             message: i18next.t('Authorization Error'),
-            description: i18next.t('Please authorize to access your account'),
+            description: i18next.t('Please authorize to access your account')
           })
           dispatch(updateErrorInfo({ hasError: true, errorInfo: 'Authorization Error' }))
         } else {
           notification.error({
             message: i18next.t(`Unknown error`),
-            description: i18next.t(`${error.message}`),
+            description: i18next.t(`${error.message}`)
           })
           dispatch(updateErrorInfo({ hasError: true, errorInfo: t(`Unknown error`) }))
         }
@@ -62,7 +62,7 @@ const useAuth = () => {
     } else {
       notification.error({
         message: i18next.t("Can't find connector"),
-        description: i18next.t('The connector config is wrong'),
+        description: i18next.t('The connector config is wrong')
       })
       dispatch(updateErrorInfo({ hasError: true, errorInfo: "Can't find connector" }))
     }

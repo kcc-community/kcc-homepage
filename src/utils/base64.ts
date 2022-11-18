@@ -87,5 +87,5 @@ export const Base64 = {
       }
     }
     return t
-  },
+  }
 }

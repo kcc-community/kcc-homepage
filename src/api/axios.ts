@@ -69,7 +69,7 @@ const getErrorCode2text = (response: AxiosResponse): string => {
  */
 const service = Axios.create({
   baseURL: process.env.REACT_APP_API_URL + '/v1/bridge/server/',
-  timeout: 10000,
+  timeout: 10000
 })
 
 /**

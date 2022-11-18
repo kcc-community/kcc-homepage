@@ -67,9 +67,9 @@ class MiniRpcProvider implements AsyncSendable {
         method: 'POST',
         headers: {
           'content-type': 'application/json',
-          accept: 'application/json',
+          accept: 'application/json'
         },
-        body: JSON.stringify(batch.map((item) => item.request)),
+        body: JSON.stringify(batch.map((item) => item.request))
       })
     } catch (error) {
       batch.forEach(({ reject }) => reject(new Error('Failed to send batch call')))
@@ -97,7 +97,7 @@ class MiniRpcProvider implements AsyncSendable {
       const {
         resolve,
         reject,
-        request: { method },
+        request: { method }
       } = byKey[result.id]
 
       if ('error' in result) {
@@ -140,10 +140,10 @@ class MiniRpcProvider implements AsyncSendable {
           jsonrpc: '2.0',
           id: this.nextId++,
           method,
-          params,
+          params
         },
         resolve,
-        reject,
+        reject
       })
     })
     this.batchTimeoutId = this.batchTimeoutId ? this.batchTimeoutId : setTimeout(this.clearBatch, this.batchWaitTimeMs)
@@ -159,7 +159,7 @@ export class NetworkConnector extends AbstractConnector {
   constructor({ urls, defaultChainId }: NetworkConnectorArguments) {
     invariant(defaultChainId || Object.keys(urls).length === 1, 'defaultChainId is a required argument with >1 url')
     super({
-      supportedChainIds: Object.keys(urls).map((k): number => Number(k)),
+      supportedChainIds: Object.keys(urls).map((k): number => Number(k))
     })
 
     this.currentChainId = defaultChainId || Number(Object.keys(urls)[0])
@@ -179,7 +179,7 @@ export class NetworkConnector extends AbstractConnector {
     return {
       provider: this.providers[this.currentChainId],
       chainId: this.currentChainId,
-      account: null,
+      account: null
     }
   }
 

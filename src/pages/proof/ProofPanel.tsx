@@ -239,7 +239,7 @@ const TokenPanel: React.FC<any> = (props) => {
           <LockAmount>{`${new BN(props.balance).toFormat({
             groupSeparator: ',',
             groupSize: 3,
-            decimalSeparator: '.',
+            decimalSeparator: '.'
           })}  ${props.name}`}</LockAmount>
           <AddressRow>
             <AddressText>{shortAddress1(props.address)}</AddressText>
@@ -251,7 +251,7 @@ const TokenPanel: React.FC<any> = (props) => {
           <LockAmount>{`${new BN(props.supply).toFormat({
             groupSeparator: ',',
             groupSize: 3,
-            decimalSeparator: '.',
+            decimalSeparator: '.'
           })}  ${props.symbol}`}</LockAmount>
           <AddressRow>
             <AddressText>{shortAddress1(props.address)}</AddressText>

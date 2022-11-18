@@ -280,7 +280,7 @@ const AppMenu: React.FunctionComponent<AppMenuProps> = ({ style }) => {
         border: `1px solid ${theme.colors.primary}`,
         color: `${theme.colors.primary} !important`,
         zIndex: 999,
-        background: '#000',
+        background: '#000'
       }
     : {}
 
@@ -303,7 +303,7 @@ const AppMenu: React.FunctionComponent<AppMenuProps> = ({ style }) => {
             background: 'transparent',
             color: theme.colors.primary,
             ...style,
-            ...M_MENU_CSS,
+            ...M_MENU_CSS
           }}
         >
           {MenuListDom}

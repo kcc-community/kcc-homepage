@@ -67,7 +67,7 @@ export const ErrorText = styled.span`
 `
 export enum TransferType {
   'NATIVE',
-  'TOKEN',
+  'TOKEN'
 }
 
 const AmountInput: React.FunctionComponent<AmountInputProps> = ({
@@ -82,7 +82,7 @@ const AmountInput: React.FunctionComponent<AmountInputProps> = ({
   supplyLoading,
   availabelLoading,
   swapFeeLoading,
-  receiveAddress,
+  receiveAddress
 }) => {
   const { t, i18n } = useTranslation()
   const { account } = useWeb3React()
@@ -283,7 +283,7 @@ const AmountInput: React.FunctionComponent<AmountInputProps> = ({
     totalSupply,
     swapFeeLoading,
     availabelLoading,
-    supplyLoading,
+    supplyLoading
   ])
 
   const keyPress = (e: any) => {

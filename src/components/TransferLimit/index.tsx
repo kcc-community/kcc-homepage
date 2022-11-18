@@ -54,7 +54,7 @@ const TransferLimit: React.FunctionComponent<TransferLimitProps> = ({ loading, a
               width: '12px',
               height: '12px',
               color: '#000',
-              fontSize: '10px',
+              fontSize: '10px'
             }}
           />
         ) : (

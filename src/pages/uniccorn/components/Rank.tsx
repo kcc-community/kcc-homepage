@@ -125,7 +125,7 @@ const awardList = [
     color: '#EBDAA9',
     bg: require('../../../assets/images/unicorn/gray1.png').default,
     height: '200px',
-    name: 'Gold Unicorn',
+    name: 'Gold Unicorn'
   },
   {
     award: '$200,000',
@@ -134,7 +134,7 @@ const awardList = [
     color: '#A853E4',
     bg: require('../../../assets/images/unicorn/2-bg.png').default,
     height: '278px',
-    name: 'Epic Unicorn',
+    name: 'Epic Unicorn'
   },
   {
     award: '$300,000',
@@ -143,7 +143,7 @@ const awardList = [
     color: '#F18449',
     bg: require('../../../assets/images/unicorn/1-bg.png').default,
     height: '353px',
-    name: 'Legendary Unicorn',
+    name: 'Legendary Unicorn'
   },
   {
     award: '$100,000',
@@ -152,7 +152,7 @@ const awardList = [
     color: '#3FC1F1',
     bg: require('../../../assets/images/unicorn/3-bg.png').default,
     height: '233px',
-    name: 'Diamond Unicorn',
+    name: 'Diamond Unicorn'
   },
   {
     award: '$50,000',
@@ -161,8 +161,8 @@ const awardList = [
     color: '#EBDAA9',
     bg: require('../../../assets/images/unicorn/gray2.png').default,
     height: '173px',
-    name: 'Gold Unicorn',
-  },
+    name: 'Gold Unicorn'
+  }
 ]
 
 const Rank = () => {

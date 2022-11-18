@@ -137,24 +137,24 @@ const contactList = [
       { language: 'Spanish', url: 'https://t.me/KCCOfficialSpanishCommunity' },
       { language: 'Arabic', url: 'https://t.me/KCCOfficialArabicCommunity' },
       { language: 'Chinese', url: 'https://t.me/KCCOfficialChineseCommunity' },
-      { language: 'Portuguese', url: 'https://t.me/KCCOfficialBrazil' },
-    ],
+      { language: 'Portuguese', url: 'https://t.me/KCCOfficialBrazil' }
+    ]
   },
   {
     name: 'Discord',
     icon: require('../../../assets/images/activity/discord.png').default,
-    list: [{ language: 'English', url: 'https://discord.gg/ZuV64JAveX' }],
+    list: [{ language: 'English', url: 'https://discord.gg/ZuV64JAveX' }]
   },
   {
     name: 'Twitter',
     icon: require('../../../assets/images/activity/twitter.png').default,
-    list: [{ language: 'English', url: 'https://twitter.com/KCCOfficialTW' }],
+    list: [{ language: 'English', url: 'https://twitter.com/KCCOfficialTW' }]
   },
   {
     name: 'Medium',
     icon: require('../../../assets/images/activity/medium.png').default,
-    list: [{ language: 'English', url: 'https://kccofficial.medium.com' }],
-  },
+    list: [{ language: 'English', url: 'https://kccofficial.medium.com' }]
+  }
 ]
 
 function MediaList() {

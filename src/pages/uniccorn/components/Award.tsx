@@ -133,27 +133,27 @@ const AwardImageWrap = styled.div`
 const awardList1 = [
   {
     src: require('../../../assets/images/unicorn/award1.png').default,
-    text: 'Sponsored by Conflux',
+    text: 'Sponsored by Conflux'
   },
   {
     src: require('../../../assets/images/unicorn/award2.png').default,
-    text: 'Most Popular Community Award',
+    text: 'Most Popular Community Award'
   },
   {
     src: require('../../../assets/images/unicorn/award3.png').default,
-    text: 'Best Wallet Experience Award',
-  },
+    text: 'Best Wallet Experience Award'
+  }
 ]
 
 const awardList2 = [
   {
     src: require('../../../assets/images/unicorn/award4.png').default,
-    text: 'Most Promising Development Award',
+    text: 'Most Promising Development Award'
   },
   {
     src: require('../../../assets/images/unicorn/award5.png').default,
-    text: 'Best Social Contribution Award',
-  },
+    text: 'Best Social Contribution Award'
+  }
 ]
 
 const Award = () => {

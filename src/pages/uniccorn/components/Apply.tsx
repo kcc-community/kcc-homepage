@@ -186,7 +186,7 @@ const Apply = () => {
               color: '#fff',
               marginTop: isMobile ? '30px' : '60px',
               fontSize: isMobile ? '14px' : '18px',
-              padding: isMobile ? '0 24px' : '0px',
+              padding: isMobile ? '0 24px' : '0px'
             }}
           >
             *Reminder: Unicorn Contest data will only be calculated for projects operating on KCC during the contest

@@ -209,7 +209,7 @@ const awardList1 = [
     title: 'Top SocialFi/DAO/Web3 Project',
     logo: require('../../../assets/images/unicorn/hashtag.png').default,
     name: 'XHashtag',
-    link: 'https://www.xhashtag.io/',
+    link: 'https://www.xhashtag.io/'
   },
   {
     icon: require('../../../assets/images/unicorn/p-1.png').default,
@@ -217,22 +217,22 @@ const awardList1 = [
     desc: 'Sponsored by Skyman Ventures',
     logo: require('../../../assets/images/unicorn/pikaster.png').default,
     name: 'pikaster',
-    link: 'https://www.pikaster.com/',
+    link: 'https://www.pikaster.com/'
   },
   {
     icon: require('../../../assets/images/unicorn/p-4.png').default,
     title: 'Top Infrastructural Project',
     logo: require('../../../assets/images/unicorn/nest.png').default,
     name: 'Nest',
-    link: '	https://nestprotocol.org',
+    link: '	https://nestprotocol.org'
   },
   {
     icon: require('../../../assets/images/unicorn/p-2.png').default,
     title: 'Top NFT Project',
     logo: require('../../../assets/images/unicorn/pencilDao.png').default,
     name: 'PencilDAO',
-    link: 'https://www.pencildao.com/staking.html#lomen-staking',
-  },
+    link: 'https://www.pencildao.com/staking.html#lomen-staking'
+  }
 ]
 
 const UnicornTitle: FunctionComponent<{ title: string; color?: string }> = ({ title, color }) => {

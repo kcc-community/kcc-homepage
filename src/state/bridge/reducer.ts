@@ -50,7 +50,7 @@ export interface BridgeState {
 const initialState: BridgeState = {
   pairList: [],
   currentCurrency: { name: '', symbol: '', logoUrl: '', decimals: 0 },
-  currentPairId: -1,
+  currentPairId: -1
 }
 
 export default createReducer(initialState, (builder) =>

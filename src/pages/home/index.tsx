@@ -135,20 +135,20 @@ const ImageWrap = styled(Row)`
 const Characteristics = [
   {
     description: 'KCC INTRODUCE 1',
-    image: require('../../assets/images/home/introduce-1@2x.png').default,
+    image: require('../../assets/images/home/introduce-1@2x.png').default
   },
   {
     description: 'KCC INTRODUCE 2',
-    image: require('../../assets/images/home/introduce-2@2x.png').default,
+    image: require('../../assets/images/home/introduce-2@2x.png').default
   },
   {
     description: 'KCC INTRODUCE 3',
-    image: require('../../assets/images/home/introduce-3@2x.png').default,
+    image: require('../../assets/images/home/introduce-3@2x.png').default
   },
   {
     description: 'KCC INTRODUCE 4',
-    image: require('../../assets/images/home/introduce-4@2x.png').default,
-  },
+    image: require('../../assets/images/home/introduce-4@2x.png').default
+  }
 ]
 
 export const MailSubText = styled.span`
@@ -397,7 +397,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
     if (index === 1 && isMobile) {
       key = {
         borderLeft: coloredBorder,
-        borderBottom: coloredBorder,
+        borderBottom: coloredBorder
       }
     }
     if (index === 2 && isMobile) {
@@ -406,7 +406,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
         borderRight: coloredBorder,
         position: 'relative',
         top: '-1px',
-        right: '-1px',
+        right: '-1px'
       }
     }
     // less 320px,remove
@@ -450,8 +450,8 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
         url: KCC.MAIL_SUBSCRIBE_PROXY,
         data: {
           email_address: email,
-          status: 'subscribed',
-        },
+          status: 'subscribed'
+        }
       })
       if (res.data.status === 400) {
         message.warning(t(`Subscription failed`))
@@ -477,7 +477,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
       if (ethereum?.chainId === '0x141') {
         window.scrollTo({
           top: 460,
-          behavior: 'smooth',
+          behavior: 'smooth'
         })
       } else {
         ethereum
@@ -490,12 +490,12 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
                 nativeCurrency: {
                   name: 'KCS',
                   symbol: 'KCS',
-                  decimals: 18,
+                  decimals: 18
                 },
                 rpcUrls: ['https://rpc-mainnet.kcc.network'],
-                blockExplorerUrls: ['https://explorer.kcc.io'],
-              },
-            ],
+                blockExplorerUrls: ['https://explorer.kcc.io']
+              }
+            ]
           })
           .catch((error: any) => {
             console.log(error)
@@ -631,7 +631,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
                 justifyContent: 'flex-start',
                 height: '120px',
                 position: 'relative',
-                width: '230px',
+                width: '230px'
               }}
             >
               <MilestoneIconWrap>
@@ -669,7 +669,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
             display: 'flex',
             marginLeft: '9px',
             flexFlow: 'row nowrap',
-            alignItems: 'center',
+            alignItems: 'center'
           }}
         >
           <DotComponent shining={index === KCC.MILESTONES.length - 1} />
@@ -686,7 +686,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
           alignItems: 'center',
           justifyContent: 'flex-start',
           height: '80px',
-          position: 'relative',
+          position: 'relative'
         }}
       >
         <MilestoneIconWrap>{Icon}</MilestoneIconWrap>
@@ -742,7 +742,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
                     width: isMobile ? '160px' : '145px',
                     height: isMobile ? '48px' : '36px',
                     marginRight: '20px',
-                    color: '#000',
+                    color: '#000'
                   }}
                   onClick={navToAddNetwork}
                 >
@@ -758,7 +758,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
                       marginTop: '24px',
                       width: isMobile ? '160px' : '145px',
                       height: isMobile ? '48px' : '36px',
-                      color: '#000',
+                      color: '#000'
                     }}
                     onClick={navToAddNetwork}
                   >
@@ -792,7 +792,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
                       width: 'auto',
                       textAlign: 'left',
                       whiteSpace: 'inherit',
-                      fontSize: i18n.language === 'en' ? '38px' : '40px',
+                      fontSize: i18n.language === 'en' ? '38px' : '40px'
                     }}
                   >
                     {t('Why KuCoin Community Chain')}
@@ -819,7 +819,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
                       textAlign: 'left',
                       fontSize: '24px',
                       color: '#fff',
-                      marginBottom: '12px',
+                      marginBottom: '12px'
                     }}
                   >
                     {t('Why KuCoin Community Chain')}
@@ -853,7 +853,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
           style={{
             padding: isMobile || isTablet ? '47px 24px 0px 24px' : '88px 0 0px 0',
             width: isMobile ? 'auto' : '100%',
-            maxWidth: isMobile ? '100%' : '1200px',
+            maxWidth: isMobile ? '100%' : '1200px'
           }}
         >
           <ColumnCenter>
@@ -885,16 +885,16 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
                     zIndex: 3,
                     width: '1200px',
                     left: '40px',
-                    top: '0px',
+                    top: '0px'
                   }}
                 >
                   <Progress
                     style={{
-                      width: '100%',
+                      width: '100%'
                     }}
                     strokeColor={{
                       '0%': '#126748',
-                      '100%': '#09402A',
+                      '100%': '#09402A'
                     }}
                     showInfo={false}
                     strokeWidth={4}
@@ -924,7 +924,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
           style={{
             padding: isMobile || isTablet ? '46px 24px 0px 24px' : '120px 0 65px 0',
             position: 'relative',
-            zIndex: 2,
+            zIndex: 2
           }}
         >
           <ColumnCenter>
@@ -961,7 +961,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
                 style={{
                   width: isMobile ? '100%' : '400px',
                   marginTop: isMobile ? '38px' : '16px',
-                  flexFlow: isMobile ? 'row wrap' : 'row nowrap',
+                  flexFlow: isMobile ? 'row wrap' : 'row nowrap'
                 }}
               >
                 <Input
@@ -978,7 +978,7 @@ const HomePage: React.FunctionComponent<HomePageProps> = () => {
                       marginTop: isMobile ? '26px' : '0px',
                       marginLeft: isMobile ? '0px' : '20px',
                       background: '#000',
-                      border: 'none',
+                      border: 'none'
                     }}
                     onClick={subscribe}
                     disabled={disable}

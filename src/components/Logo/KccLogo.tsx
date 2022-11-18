@@ -5,7 +5,7 @@ import './kcc-logo.less'
 
 export enum PictureType {
   'svg',
-  'png',
+  'png'
 }
 
 const Image = styled.img`
@@ -25,7 +25,7 @@ const KccLogo: React.FunctionComponent<KccLogoProps> = ({
   abbr = false,
   lang = 'en',
   sourceType = PictureType.svg,
-  styles,
+  styles
 }) => {
   const router = useHistory()
 

@@ -309,7 +309,7 @@ const BridgeListPage: React.FunctionComponent<BridgeListPageProps> = () => {
         if (unconfirm.length > 0 && currentPage === 1) {
           setHistoryList(() => [
             ...unconfirm,
-            ...data.list.slice(0, pageSize - unconfirm.length <= 4 ? pageSize - unconfirm.length : 0),
+            ...data.list.slice(0, pageSize - unconfirm.length <= 4 ? pageSize - unconfirm.length : 0)
           ])
         } else {
           setHistoryList(() => [...data.list])

@@ -16,7 +16,7 @@ const initialState: ApplicationState = {
   language: 'en',
   mobileMenuShow: false,
   bridgeLoadingVisible: false,
-  bridgeLoadingStatus: 0,
+  bridgeLoadingStatus: 0
 }
 
 export default createReducer(initialState, (builder) =>

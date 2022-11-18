@@ -69,7 +69,7 @@ export const Box = styled.div`
 
 export enum ChainDirection {
   'From',
-  'To',
+  'To'
 }
 
 const Swap = require('../../assets/images/bridge/transfer.png').default

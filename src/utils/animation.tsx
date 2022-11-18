@@ -9,7 +9,6 @@ interface FadeUpProps {
   playScale?: number
 }
 
-
 export function FadeInUp({ children, playScale = 0.1, delay, onClick }: FadeUpProps) {
   return (
     // @ts-ignore
@@ -23,7 +22,7 @@ export function FadeInUp({ children, playScale = 0.1, delay, onClick }: FadeUpPr
   )
 }
 
-export function FadeInLeft({ children, playScale = 0.2 }:FadeUpProps) {
+export function FadeInLeft({ children, playScale = 0.2 }: FadeUpProps) {
   return (
     <OverPack playScale={playScale}>
       <TweenOne animation={{ opacity: 1, x: 20 }} style={{ opacity: 0, transform: 'translateX(-20)' }}>
@@ -33,8 +32,7 @@ export function FadeInLeft({ children, playScale = 0.2 }:FadeUpProps) {
   )
 }
 
-
-export function FadeInRight({ children, playScale = 0.2 }:FadeUpProps) {
+export function FadeInRight({ children, playScale = 0.2 }: FadeUpProps) {
   return (
     <OverPack playScale={playScale}>
       <TweenOne animation={{ opacity: 1, x: -20 }} style={{ opacity: 0, transform: 'translateX(20)' }}>

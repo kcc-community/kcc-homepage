@@ -202,7 +202,7 @@ const awardList = [
     name: 'Legendary Unicorn',
     logo: require('../../../assets/images/unicorn/mojito.png').default,
     title: 'MojitoSwap',
-    link: 'https://app.mojitoswap.finance/',
+    link: 'https://app.mojitoswap.finance/'
   },
   {
     award: '$200,000',
@@ -215,7 +215,7 @@ const awardList = [
     name: 'Epic Unicorn',
     logo: require('../../../assets/images/unicorn/openLeverage.png').default,
     title: 'OpenLeverage',
-    link: 'https://openleverage.finance/',
+    link: 'https://openleverage.finance/'
   },
   {
     award: '$100,000',
@@ -228,7 +228,7 @@ const awardList = [
     name: 'Diamond Unicorn',
     logo: require('../../../assets/images/unicorn/kuSwap.png').default,
     title: 'KuSwap',
-    link: 'https://kuswap.finance/#/swap',
+    link: 'https://kuswap.finance/#/swap'
   },
   {
     award: '$50,000',
@@ -241,7 +241,7 @@ const awardList = [
     name: 'Gold Unicorn',
     logo: require('../../../assets/images/unicorn/bitkeep.png').default,
     title: 'Bitkeep',
-    link: 'https://bitkeep.com/',
+    link: 'https://bitkeep.com/'
   },
 
   {
@@ -255,8 +255,8 @@ const awardList = [
     name: 'Gold Unicorn',
     logo: require('../../../assets/images/unicorn/hashtag.png').default,
     title: 'XHashtag',
-    link: 'https://www.xhashtag.io/',
-  },
+    link: 'https://www.xhashtag.io/'
+  }
 ]
 
 const GrandPrize = () => {

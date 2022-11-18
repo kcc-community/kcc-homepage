@@ -17,13 +17,13 @@ if (typeof NETWORK_URL === 'undefined') {
 }
 
 export const network = new NetworkConnector({
-  urls: { [NETWORK_CHAIN_ID]: NETWORK_URL },
+  urls: { [NETWORK_CHAIN_ID]: NETWORK_URL }
 })
 
 export function getNetWorkConnect(chainId: ChainId) {
   const selectedNetwork = getNetworkInfo(chainId)
   return new NetworkConnector({
-    urls: { [chainId]: selectedNetwork.rpc },
+    urls: { [chainId]: selectedNetwork.rpc }
   })
 }
 
@@ -39,7 +39,7 @@ export const ChainKeys = Reflect.ownKeys(networks).map((n) => String(n))
 export type ChainId = keyof typeof networks
 export type ChainKey = keyof typeof ChainKeys
 export const injected = new InjectedConnector({
-  supportedChainIds: ChainIds,
+  supportedChainIds: ChainIds
 })
 
 // mainnet only
@@ -59,5 +59,5 @@ export const walletlink = new WalletLinkConnector({
 }) */
 
 export const connectorsByName: any = {
-  [ConnectorNames.Injected]: injected,
+  [ConnectorNames.Injected]: injected
 }

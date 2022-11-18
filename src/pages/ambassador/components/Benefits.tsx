@@ -8,32 +8,32 @@ interface Props {}
 const BenifitList = [
   {
     icon: require('../../../assets/images/ambassador/1.png').default,
-    desc: 'Access to private groups, and connect with ambassadors from other countries',
+    desc: 'Access to private groups, and connect with ambassadors from other countries'
   },
   {
     icon: require('../../../assets/images/ambassador/2.png').default,
-    desc: 'Exclusive resources to help educate and onboard more community members',
+    desc: 'Exclusive resources to help educate and onboard more community members'
   },
   {
     icon: require('../../../assets/images/ambassador/3.png').default,
-    desc: 'Early access to new features and updates, and the opportunity to provide feedback ',
+    desc: 'Early access to new features and updates, and the opportunity to provide feedback '
   },
   {
     icon: require('../../../assets/images/ambassador/4.png').default,
-    desc: 'Direct access to the core team of the KCC for questions, suggestions, etc.',
+    desc: 'Direct access to the core team of the KCC for questions, suggestions, etc.'
   },
   {
     icon: require('../../../assets/images/ambassador/5.png').default,
-    desc: 'Getting funds as return based on contributions',
+    desc: 'Getting funds as return based on contributions'
   },
   {
     icon: require('../../../assets/images/ambassador/6.png').default,
-    desc: 'Tagged as one of the KCC GoDAO members and able to decide how KCC should progress ',
+    desc: 'Tagged as one of the KCC GoDAO members and able to decide how KCC should progress '
   },
   {
     icon: require('../../../assets/images/ambassador/7.png').default,
-    desc: 'Priority support from the KCC teams',
-  },
+    desc: 'Priority support from the KCC teams'
+  }
 ]
 
 const BenefitWrap = styled.div`
@@ -116,7 +116,7 @@ export default function Benefits() {
           marginTop: '89px',
           color: '#fff',
           fontSize: isMobile ? '32px' : '52px',
-          textAlign: isMobile ? 'center' : 'left',
+          textAlign: isMobile ? 'center' : 'left'
         }}
       >
         Benefits of Being a GoDAO Ambassador

@@ -33,7 +33,7 @@ export const allLanguages = [
   ZHTW,
   ESES,
   DE,
-  PTBR,
+  PTBR
   /*   AR,
   BN,
 

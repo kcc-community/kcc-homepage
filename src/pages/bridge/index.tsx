@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Switch, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 import { Dropdown } from 'antd'
-import { ArrowRightOutlined } from '@ant-design/icons';
+import { ArrowRightOutlined } from '@ant-design/icons'
 import { CSSTransition, SwitchTransition } from 'react-transition-group'
 import { useWeb3React } from '@web3-react/core'
 import { useTranslation } from 'react-i18next'
@@ -254,13 +254,21 @@ const BridgePage: React.FunctionComponent<BridgePageProps> = ({ children }) => {
 
   const menu = (
     <InfoWrapper>
-      <InfoItem onClick={() => {window.open('https://forms.office.com/r/JfXxKRjuwi')}}>
+      <InfoItem
+        onClick={() => {
+          window.open('https://forms.office.com/r/JfXxKRjuwi')
+        }}
+      >
         <InfoItemText>{t('About technical issues')}</InfoItemText>
-        <ArrowRightOutlined style={{color: theme.colors.primary, fontSize: '11px'}}/>
+        <ArrowRightOutlined style={{ color: theme.colors.primary, fontSize: '11px' }} />
       </InfoItem>
-      <InfoItem onClick={() => {window.open('https://forms.office.com/r/fBYJgH68ZX')}}>
+      <InfoItem
+        onClick={() => {
+          window.open('https://forms.office.com/r/fBYJgH68ZX')
+        }}
+      >
         <InfoItemText>{t('About business issues')}</InfoItemText>
-        <ArrowRightOutlined style={{color: theme.colors.primary, fontSize: '11px'}}/>
+        <ArrowRightOutlined style={{ color: theme.colors.primary, fontSize: '11px' }} />
       </InfoItem>
     </InfoWrapper>
   )
@@ -303,7 +311,9 @@ const BridgePage: React.FunctionComponent<BridgePageProps> = ({ children }) => {
             </CSSTransition>
           </SwitchTransition>
         )}
-        <Dropdown overlay={menu} placement="bottomLeft"><QuestionWrapper>{t('Got a problem?')}</QuestionWrapper></Dropdown>
+        <Dropdown overlay={menu} placement="bottomLeft">
+          <QuestionWrapper>{t('Got a problem?')}</QuestionWrapper>
+        </Dropdown>
       </Content>
       <CenterBgImg src={CenterBg} />
       <ButtonBgImg src={require('../../assets/images/bridge/bottom-bg@2x.png').default} />

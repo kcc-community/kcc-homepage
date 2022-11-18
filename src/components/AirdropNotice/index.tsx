@@ -30,7 +30,7 @@ const AirdropNotice: React.FunctionComponent<AirdropNoticeProps> = ({ show }) =>
       footer={[
         <Button key="back" type="primary" onClick={handleCancel}>
           {t(`Confirm`)}
-        </Button>,
+        </Button>
       ]}
       cancelText={null}
       visible={isModalVisible}

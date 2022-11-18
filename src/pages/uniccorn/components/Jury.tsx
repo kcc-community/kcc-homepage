@@ -115,32 +115,32 @@ const juryList1 = [
     logo: require('../../../assets/images/unicorn/jury1.png').default,
     name: 'KCC DAO',
     desc: '',
-    date: '2022/03/02 18:00:00',
+    date: '2022/03/02 18:00:00'
   },
   {
     logo: require('../../../assets/images/unicorn/jury2.png').default,
     name: 'Jun Park',
     desc: 'Hashed',
-    date: '2022/03/03 18:00:00',
+    date: '2022/03/03 18:00:00'
   },
   {
     logo: require('../../../assets/images/unicorn/jury3.png').default,
     name: 'Péter Garamvölgyi',
     desc: 'Conflux',
-    date: '2022/03/04 18:00:00',
+    date: '2022/03/04 18:00:00'
   },
   {
     logo: require('../../../assets/images/unicorn/jury5.png').default,
     name: 'Jacob',
     desc: 'HashKey Capital',
-    date: '2022/03/05 18:00:00',
+    date: '2022/03/05 18:00:00'
   },
   {
     logo: require('../../../assets/images/unicorn/jury6.png').default,
     name: 'Jeff Nowak',
     desc: 'Maven Capital',
-    date: '2022/03/06 18:00:00',
-  },
+    date: '2022/03/06 18:00:00'
+  }
 ]
 
 const juryList2 = [
@@ -148,32 +148,32 @@ const juryList2 = [
     logo: require('../../../assets/images/unicorn/jury7.png').default,
     name: 'Joris van Velzen',
     desc: 'Skyman Ventures',
-    date: '2022/03/07 18:00:00',
+    date: '2022/03/07 18:00:00'
   },
   {
     logo: require('../../../assets/images/unicorn/jury4.png').default,
     name: 'Tracy',
     desc: 'Cointelegraph',
-    date: '2022/03/08 18:00:00',
+    date: '2022/03/08 18:00:00'
   },
   {
     logo: require('../../../assets/images/unicorn/jury8.png').default,
     name: 'Yao',
     desc: 'KuCoin Ventures',
-    date: '2022/03/09 18:00:00',
+    date: '2022/03/09 18:00:00'
   },
   {
     logo: require('../../../assets/images/unicorn/jury9.png').default,
     name: 'Han',
     desc: 'KuCoin Labs',
-    date: '2022/03/10 18:00:00',
+    date: '2022/03/10 18:00:00'
   },
   {
     logo: require('../../../assets/images/unicorn/jury10.png').default,
     name: 'Hen Vai',
     desc: 'Blogtienao',
-    date: '2022/03/11 18:00:00',
-  },
+    date: '2022/03/11 18:00:00'
+  }
 ]
 
 const juryList = [...juryList1, ...juryList2]

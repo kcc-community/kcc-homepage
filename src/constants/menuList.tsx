@@ -27,21 +27,21 @@ export const HOME_MENU_LIST = [
     title: 'Developer Docs',
     subTitle: 'Start building on KuCoin Community Chain',
     route: KCC.DOCS_URL,
-    icon: require('../assets/images/Icons/menu/docs@2x.png').default,
+    icon: require('../assets/images/Icons/menu/docs@2x.png').default
   },
   {
     title: 'Github',
     subTitle: 'Visit our Github community',
     route: KCC.GITHUB_URL,
-    icon: require('../assets/images/Icons/menu/github@2x.png').default,
-  },
+    icon: require('../assets/images/Icons/menu/github@2x.png').default
+  }
 ]
 
 export const MENU_LIST = [
   {
     name: 'Home',
     route: '/',
-    hasChildren: false,
+    hasChildren: false
   },
   {
     name: 'Developers',
@@ -51,33 +51,33 @@ export const MENU_LIST = [
         title: 'Developer Docs',
         subTitle: 'Start building on KuCoin Community Chain',
         route: KCC.DOCS_URL,
-        icon: require('../assets/images/Icons/menu/docs@2x.png').default,
+        icon: require('../assets/images/Icons/menu/docs@2x.png').default
       },
       {
         title: 'Github',
         subTitle: 'Visit our Github community',
         route: KCC.GITHUB_URL,
-        icon: require('../assets/images/Icons/menu/github@2x.png').default,
+        icon: require('../assets/images/Icons/menu/github@2x.png').default
       },
       {
         title: 'Testnet Explorer',
         subTitle: 'View information on the KCC public chain（testnet）',
         route: KCC.TEST_EXPLORER,
-        icon: require('../assets/images/Icons/menu/chrome@2x.png').default,
+        icon: require('../assets/images/Icons/menu/chrome@2x.png').default
       },
       {
         title: 'KCC Faucet',
         subTitle: 'Get KCS tokens',
         route: KCC.MAINNET_FAUCET,
-        icon: require('../assets/images/Icons/menu/main-faucet.png').default,
+        icon: require('../assets/images/Icons/menu/main-faucet.png').default
       },
       {
         title: 'Testnet faucet',
         subTitle: 'Get KCC testnet tokens',
         route: KCC.FAUCET,
-        icon: require('../assets/images/Icons/menu/faucet@2x.png').default,
-      },
-    ],
+        icon: require('../assets/images/Icons/menu/faucet@2x.png').default
+      }
+    ]
   },
   {
     name: 'Ecosystem',
@@ -91,15 +91,15 @@ export const MENU_LIST = [
             title: 'Explorer1',
             subTitle: 'View information on the KCC public chain',
             route: KCC.EXPLORER,
-            icon: require('../assets/images/Icons/menu/chrome@2x.png').default,
+            icon: require('../assets/images/Icons/menu/chrome@2x.png').default
           },
           {
             title: 'Explorer2',
             subTitle: 'View information on the KCC public chain',
             route: KCC.EXPLORER2,
-            icon: require('../assets/images/Icons/menu/chrome@2x.png').default,
-          },
-        ],
+            icon: require('../assets/images/Icons/menu/chrome@2x.png').default
+          }
+        ]
       },
       {
         groupName: 'Dapp',
@@ -114,14 +114,14 @@ export const MENU_LIST = [
             title: 'KCC BRIDGE TITLE',
             subTitle: 'KCC BRIDGE DESC',
             route: '/bridge/transfer',
-            icon: require('../assets/images/Icons/menu/bridge.png').default,
+            icon: require('../assets/images/Icons/menu/bridge.png').default
           },
           {
             title: 'Gnosis Safe Multisig',
             subTitle: 'Protect asset security',
             route: KCC.SAFE_GNOSIS,
-            icon: require('../assets/images/home/duoqian.svg').default,
-          },
+            icon: require('../assets/images/home/duoqian.svg').default
+          }
 
           // {
           //   title: 'Submit a Dapp',
@@ -129,7 +129,7 @@ export const MENU_LIST = [
           //   route: KCC.DAPP_URL,
           //   icon: require('../assets/images/Icons/menu/submit@2x.png').default,
           // },
-        ],
+        ]
       },
       {
         groupName: 'Wallet',
@@ -138,13 +138,13 @@ export const MENU_LIST = [
             title: 'Metamask',
             subTitle: 'Visit and link to metamask',
             route: 'https://metamask.io',
-            icon: require('../assets/images/Icons/menu/metamask@2x.png').default,
+            icon: require('../assets/images/Icons/menu/metamask@2x.png').default
           },
           {
             title: 'KuCoin Wallet',
             subTitle: 'Go to KuCoin Wallet',
             route: 'https://www.kuwallet.com',
-            icon: require('../assets/images/Icons/menu/kuwallet.svg').default,
+            icon: require('../assets/images/Icons/menu/kuwallet.svg').default
           },
           // {
           //   title: 'ImToken',
@@ -162,11 +162,11 @@ export const MENU_LIST = [
             title: 'More Wallet',
             subTitle: 'View more wallet in Discover',
             route: 'https://discover.kcc.io/project?id=10',
-            icon: require('../assets/images/Icons/menu/wallet@2x.png').default,
-          },
-        ],
-      },
-    ],
+            icon: require('../assets/images/Icons/menu/wallet@2x.png').default
+          }
+        ]
+      }
+    ]
   },
   {
     name: 'Community',
@@ -176,15 +176,15 @@ export const MENU_LIST = [
         title: 'GoDAO',
         subTitle: 'Dao Desc',
         route: KCC.DAO,
-        icon: require('../assets/images/Icons/menu/dao@2x.png').default,
+        icon: require('../assets/images/Icons/menu/dao@2x.png').default
       },
       {
         title: 'Grant Program',
         subTitle: `support for community development and research`,
         route: '/community/grants',
-        icon: require('../assets/images/Icons/menu/grant@2x.png').default,
-      },
-    ],
+        icon: require('../assets/images/Icons/menu/grant@2x.png').default
+      }
+    ]
   },
   // {
   //   name: <NodeStakingLink title="Beowulf" link="https://beowulf.kcc.io/" />,
@@ -198,19 +198,19 @@ export const MENU_LIST = [
     subTitle: '',
     route: KCC.STAKING,
     icon: require('../assets/images/Icons/menu/chrome@2x.png').default,
-    hasChildren: false,
+    hasChildren: false
   },
   {
     name: 'Discover',
     subTitle: 'Discover Desc',
     route: KCC.DISCOVER,
     icon: require('../assets/images/Icons/menu/chrome@2x.png').default,
-    hasChildren: false,
+    hasChildren: false
   },
   {
     name: 'News',
     route: 'https://news.kcc.io',
-    hasChildren: false,
+    hasChildren: false
   },
   {
     name: 'Activites',
@@ -219,6 +219,6 @@ export const MENU_LIST = [
     // route: '',
     // subTitle: 'Coming Soon...',
     icon: require('../assets/images/Icons/menu/activity@2x.png').default,
-    hasChildren: false,
-  },
+    hasChildren: false
+  }
 ]

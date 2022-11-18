@@ -2,23 +2,23 @@ import React, { useEffect, useState } from 'react'
 import { Web3ReactProvider, useWeb3React, UnsupportedChainIdError } from '@web3-react/core'
 import {
   NoEthereumProviderError,
-  UserRejectedRequestError as UserRejectedRequestErrorInjected,
+  UserRejectedRequestError as UserRejectedRequestErrorInjected
 } from '@web3-react/injected-connector'
 import { UserRejectedRequestError as UserRejectedRequestErrorWalletConnect } from '@web3-react/walletconnect-connector'
 import { UserRejectedRequestError as UserRejectedRequestErrorFrame } from '@web3-react/frame-connector'
 import { Web3Provider } from '@ethersproject/providers'
-import { injected,network } from '../../connectors'
+import { injected, network } from '../../connectors'
 import { useEagerConnect, useInactiveListener } from '../../hooks'
 import FullLoading from '../FullLoading'
 import { useDispatch } from 'react-redux'
 import { updateErrorInfo } from '../../state/wallet/actions'
 
 export enum ConnectorNames {
-  Injected = 'Injected',
+  Injected = 'Injected'
 }
 
 export const connectorsByName: { [connectorName: string]: any } = {
-  [ConnectorNames.Injected]: injected,
+  [ConnectorNames.Injected]: injected
 }
 
 export function getErrorMessage(error: Error) {

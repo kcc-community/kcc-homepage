@@ -48,7 +48,7 @@ const UnicornReverseIcon = styled.img`
   }
 `
 
-const UnicornTitle: FunctionComponent<{ title: string; color?: string }> = ({ title, color}) => {
+const UnicornTitle: FunctionComponent<{ title: string; color?: string }> = ({ title, color }) => {
   const url = color
     ? require('../../../assets/images/unicorn/yellow-unicorn.png').default
     : require('../../../assets/images/unicorn/unicorn.png').default

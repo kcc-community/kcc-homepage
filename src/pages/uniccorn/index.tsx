@@ -84,7 +84,7 @@ const settings = {
   starWarpTunnelDiameter: 100 /*tunnel diameter*/,
   starFollowMouseSensitivity: 0.025 /*mouse follow sensitivity*/,
   starFollowMouseXAxis: true /*enable/disable mouse follow x axis*/,
-  starFollowMouseYAxis: true /*enable/disable mouse follow y axis*/,
+  starFollowMouseYAxis: true /*enable/disable mouse follow y axis*/
 }
 
 const UnicornPage: React.FunctionComponent = () => {

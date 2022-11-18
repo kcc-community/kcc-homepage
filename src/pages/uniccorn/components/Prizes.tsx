@@ -168,20 +168,20 @@ const awardList1 = [
   {
     icon: require('../../../assets/images/unicorn/p-1.png').default,
     title: 'Top GameFi/Metaverse Project',
-    desc: '– Sponsored by Skyman Ventures',
+    desc: '– Sponsored by Skyman Ventures'
   },
   {
     icon: require('../../../assets/images/unicorn/p-2.png').default,
-    title: 'Top NFT Project',
+    title: 'Top NFT Project'
   },
   {
     icon: require('../../../assets/images/unicorn/p-3.png').default,
-    title: 'Top SocialFi/DAO/Web3 Project',
+    title: 'Top SocialFi/DAO/Web3 Project'
   },
   {
     icon: require('../../../assets/images/unicorn/p-4.png').default,
-    title: 'Top Infrastructural Project',
-  },
+    title: 'Top Infrastructural Project'
+  }
 ]
 
 const Prize = () => {

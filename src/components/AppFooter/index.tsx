@@ -116,7 +116,7 @@ const AppFooter: React.FunctionComponent<AppFooterProps> = () => {
           en: 'en-us',
           'zh-CN': 'zh-cn',
           'es-ES': 'es-es',
-          'de-DE': 'de-de',
+          'de-DE': 'de-de'
         }
         // Open the corresponding document address according to the current language
         const anchor = t(navText).trimLeft().trimRight().replaceAll(' ', '-').toLowerCase()
@@ -152,7 +152,7 @@ const AppFooter: React.FunctionComponent<AppFooterProps> = () => {
               style={{
                 width: '355px',
                 justifyContent: 'flex-start',
-                alignItems: 'center',
+                alignItems: 'center'
               }}
             >
               <KccLogo abbr={true} styles={{ width: '140px', textAlign: 'left', marginTop: '-20px' }} />

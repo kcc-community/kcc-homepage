@@ -168,22 +168,22 @@ const awardList1 = [
     text: 'Most Promising Development Award',
     logo: require('../../../assets/images/unicorn/mojito.png').default,
     name: 'MojitoSwap',
-    link: 'https://app.mojitoswap.finance/',
+    link: 'https://app.mojitoswap.finance/'
   },
   {
     src: require('../../../assets/images/unicorn/award1.png').default,
     text: 'Most Innovative Technology Award',
     logo: require('../../../assets/images/unicorn/saffron.png').default,
     name: 'saffron',
-    link: 'https://kcc.saffron.finance/#home',
+    link: 'https://kcc.saffron.finance/#home'
   },
   {
     src: require('../../../assets/images/unicorn/award2.png').default,
     text: 'Most Popular Community Award',
     logo: require('../../../assets/images/unicorn/kuSwap.png').default,
     name: 'KuSwap',
-    link: 'https://kuswap.finance/#/swap',
-  },
+    link: 'https://kuswap.finance/#/swap'
+  }
 ]
 
 const awardList2 = [
@@ -192,15 +192,15 @@ const awardList2 = [
     text: 'Best Social Contribution Award',
     logo: require('../../../assets/images/unicorn/kupay.png').default,
     name: 'KuPay',
-    link: 'https://kupay.finance/',
+    link: 'https://kupay.finance/'
   },
   {
     src: require('../../../assets/images/unicorn/award3.png').default,
     text: 'Best Wallet Experience Award ',
     logo: require('../../../assets/images/unicorn/tokenPocket.png').default,
     name: 'Token Pocket',
-    link: 'https://www.tokenpocket.pro/',
-  },
+    link: 'https://www.tokenpocket.pro/'
+  }
 ]
 
 const UnicornTitle: FunctionComponent<{ title: string; color?: string }> = ({ title, color }) => {

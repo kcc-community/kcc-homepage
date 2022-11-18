@@ -18,7 +18,7 @@ export const getWalletInstance = (walletId: number) => {
 export const switchNetworkInPc = async (selectedNetworkInfo: any) => {
   await window.ethereum?.request({
     method: 'wallet_switchEthereumChain',
-    params: [{ chainId: web3Utils.toHex(selectedNetworkInfo.chain_id).toString() }],
+    params: [{ chainId: web3Utils.toHex(selectedNetworkInfo.chain_id).toString() }]
   })
 }
 
@@ -32,13 +32,13 @@ export const addNetwork = async (selectedNetworkInfo: any) => {
         nativeCurrency: {
           name: selectedNetworkInfo.symbol,
           symbol: selectedNetworkInfo.symbol.toUpperCase(), // 2-6 characters long
-          decimals: selectedNetworkInfo.decimals,
+          decimals: selectedNetworkInfo.decimals
         },
         rpcUrls: [selectedNetworkInfo.rpc],
         blockExplorerUrls: [selectedNetworkInfo.browser],
-        iconUrls: [selectedNetworkInfo.logo],
-      },
-    ],
+        iconUrls: [selectedNetworkInfo.logo]
+      }
+    ]
   }
   await window.ethereum?.request(net)
 }
@@ -78,9 +78,9 @@ export const addTokenToWallet = async (pairChain: PairChainInfo) => {
           address: pairChain.contract,
           symbol: pairChain.currency.toUpperCase(),
           decimals: pairChain.decimals,
-          image: pairChain.logoUrl,
-        },
-      },
+          image: pairChain.logoUrl
+        }
+      }
     })
     .catch(console.error)
 }
