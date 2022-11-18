@@ -104,28 +104,34 @@ const AppFooter: React.FunctionComponent<AppFooterProps> = () => {
 
   const router = useHistory()
 
-  const nav2Target = ({ navText, navRoute }: { navText: string; navRoute: string }) => {
-    let route = navRoute
-    if (route) {
-      if (route.startsWith('/')) {
-        router.push(route)
-      } else if (route.startsWith('http')) {
-        window.open(route, '_blank')
-      } else if (route.startsWith('id')) {
-        const translateLanguageTable: any = {
-          en: 'en-us',
-          'zh-CN': 'zh-cn',
-          'es-ES': 'es-es',
-          'de-DE': 'de-de'
+  const nav2Target = React.useCallback(
+    ({ navText, navRoute }: { navText: string; navRoute: string }) => {
+      let route = navRoute
+      if (route) {
+        if (route.startsWith('/')) {
+          router.push(route)
+        } else if (route.startsWith('http')) {
+          window.open(route, '_blank')
+        } else if (route.startsWith('id')) {
+          const translateLanguageTable: any = {
+            en: 'en-us',
+            'zh-CN': 'zh-cn',
+            'es-ES': 'es-es',
+            'de-DE': 'de-de',
+            'zh-TW': 'zh-hk',
+            'pt-BR': 'pt-br'
+          }
+          // Open the corresponding document address according to the current language
+          const anchor = t(navText).trimLeft().trimRight().replaceAll(' ', '-').toLowerCase()
+          console.log('i18n.language', i18n.language)
+          const url = `${KCC.DOCS_URL}${translateLanguageTable[i18n.language]}`
+          console.log('url', url)
+          window.open(url, '_blank')
         }
-        // Open the corresponding document address according to the current language
-        const anchor = t(navText).trimLeft().trimRight().replaceAll(' ', '-').toLowerCase()
-        const url = `${KCC.DOCS_URL}${translateLanguageTable[i18n.language]}/?id=${anchor}`
-        console.log('url', url)
-        window.open(url, '_blank')
       }
-    }
-  }
+    },
+    [i18n, router]
+  )
 
   const FooterNavList = FOOTER_LIST.map((item, index) => {
     const children = item.children.map((nav, index) => {
