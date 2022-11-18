@@ -236,7 +236,7 @@ const TokenPanel: React.FC<any> = (props) => {
     <TokenWrap>
       {props?.name ? (
         <Box>
-          <LockAmount>{`${new BN(props.balance).toFormat({
+          <LockAmount>{`${new BN(new BN(props.balance).toFixed(3, 1)).toFormat({
             groupSeparator: ',',
             groupSize: 3,
             decimalSeparator: '.'
@@ -248,7 +248,7 @@ const TokenPanel: React.FC<any> = (props) => {
         </Box>
       ) : (
         <Box>
-          <LockAmount>{`${new BN(props.supply).toFormat({
+          <LockAmount>{`${new BN(new BN(props.supply).toFixed(3, 1)).toFormat({
             groupSeparator: ',',
             groupSize: 3,
             decimalSeparator: '.'
