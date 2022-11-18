@@ -90,7 +90,7 @@ const settings = {
 const UnicornPage: React.FunctionComponent = () => {
   const { t } = useTranslation()
   const { isMobile } = useResponsive()
-
+  console.log("isMobile",isMobile)
   React.useEffect(() => {
     // @ts-ignore
     const warpdrive = new WarpDrive(document.getElementById('start-bg'), settings)
