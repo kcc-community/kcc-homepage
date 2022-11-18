@@ -3,6 +3,7 @@ import { Input } from 'antd'
 import axios from 'axios'
 import React from 'react'
 import styled from 'styled-components'
+import BN from 'bignumber.js'
 import ProofPanel from './ProofPanel'
 
 const Bg = require('../../assets/images/proof-bg.png').default
@@ -161,7 +162,8 @@ const Proof: React.FC = () => {
         const response = await axios.get('https://bridge-mainnet.kcc.network/v1/bridge/server/lock-info')
         const { status, data } = response
         if (status === 200) {
-          setList(() => data.data.tokens)
+          const l: LockInfo[] = data.data.tokens
+          setList(() => l.filter((n) => new BN(n.lockInfo[0].balance).gt(0)))
         } else {
           setList(() => [])
         }

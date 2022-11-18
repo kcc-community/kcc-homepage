@@ -10,15 +10,14 @@ import BridgeTransfer from './pages/bridge/transfer'
 import BridgeHistoryList from './pages/bridge/list'
 import BridgeOrderDetail from './pages/bridge/detail'
 import BridgeOrderConfirm from './pages/bridge/detail'
+import Proof from './pages/proof'
+import { clearConfirmAndOutdateOrder } from './utils/task'
 
 const Grants = lazy(() => import(/* webpackChunkName:'Grant' */ './pages/grants/index'))
 const Activity = lazy(() => import(/* webpackChunkName:'Activity' */ './pages/activities/index'))
 const Bridge = lazy(() => import(/* webpackChunkName:'Bridge' */ './pages/bridge/index'))
 const Ambassador = lazy(() => import(/* webpackChunkName:'Ambassador' */ './pages/ambassador/index'))
 const Unicorn = lazy(() => import(/* webpackChunkName:'Unicorn' */ './pages/uniccorn/index'))
-import Proof from './pages/proof'
-
-import { clearConfirmAndOutdateOrder } from './utils/task'
 
 function RouteWithSubRoutes(route: { path: string; component: any; routes: any }) {
   return (
