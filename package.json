@@ -13,6 +13,7 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "changelog:first": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "commit": "npx cz",
+    "format": "eslint --ext .ts,.tsx src",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -95,9 +96,16 @@
   "proxy": "https://rpc-mainnet.kcc.network",
   "husky": {
     "hooks": {
-      "pre-commit": "yarn format:check",
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "prettier --config .prettierrc --write",
+      "eslint --fix",
+      "git add"
+    ]
   },
   "eslintConfig": {
     "extends": [
