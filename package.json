@@ -33,7 +33,6 @@
     "ethereumjs-abi": "^0.6.8",
     "i18next": "^20.3.1",
     "lodash": "^4.17.21",
-    "mojitoswap-sdk": "0.0.2",
     "normalize.css": "^8.0.1",
     "rc-scroll-anim": "^2.7.6",
     "react": "^17.0.2",
@@ -95,10 +94,7 @@
   },
   "proxy": "https://rpc-mainnet.kcc.network",
   "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "hooks": {}
   },
   "lint-staged": {
     "src/**": [
