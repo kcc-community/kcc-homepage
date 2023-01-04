@@ -173,7 +173,7 @@ const TransferButton: React.FunctionComponent<TransferButtonProps> = ({
           <TransferButtonWrap>
             <BaseButton loading={approveLoading} onClick={applyApprove}>
               {t(`Approved`)}
-              {approveLoading ? '...' : ''}{' '}
+              {approveLoading ? '...' : ''}
             </BaseButton>
             <HistoryText onClick={() => history.push('/bridge/list')}>{t(`Transaction History`)}</HistoryText>
           </TransferButtonWrap>
