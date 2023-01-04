@@ -218,6 +218,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
 
   const [supplyLoading, setSupplyLoading] = React.useState<boolean>(false)
   const [swapFeeLoading, setSwapFeeLoading] = React.useState<boolean>(false)
+  const [approveLoading, setApproveLoading] = React.useState<boolean>(false)
   const [bridgeStatusLoading, setBridgeStatusLoading] = React.useState<boolean>(false)
 
   // important state
@@ -581,12 +582,6 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
     localStorage.setItem('PRESEND_ORDER', JSON.stringify(newOrder))
   }
 
-  const generateOrderAndConfirm = () => {
-    // TODO need to check checkList first
-    generateOrder()
-    history.push('/bridge/confirm')
-  }
-
   // make sure that approve in current data
   const applyApprove = async () => {
     if (selectedPairInfo) {
@@ -594,35 +589,31 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
       // const lib = getNetWorkConnect(selectedPairInfo.srcChainInfo.chainId)
       const contract = getErc20Contract(selectedPairInfo?.srcChainInfo.contract, library)
 
-      await contract.methods
-        .approve(
-          network.bridgeCoreAddress,
-          '115792089237316195423570985008687907853269984665640564039457584007913129639935'
-        )
-        .send({
-          from: account
-        })
-        .once('sending', () => {
-          dispatch(updateBridgeLoading({ visible: true, status: 0 }))
-        })
-        .once('confirmation', (confirmations: number) => {
-          setCheckList((list) => {
-            return { ...list, approve: true }
+      setApproveLoading(() => true)
+      try {
+        await contract.methods
+          .approve(
+            network.bridgeCoreAddress,
+            '115792089237316195423570985008687907853269984665640564039457584007913129639935'
+          )
+          .send({
+            from: account
           })
-          // generateOrderAndConfirm()
-          if (bridgeLoaing.visible) {
-            dispatch(updateBridgeLoading({ visible: true, status: 1 }))
-            setTimeout(() => {
-              dispatch(updateBridgeLoading({ visible: false, status: 0 }))
-            }, 2000)
-          } else {
-            dispatch(updateBridgeLoading({ visible: false, status: 0 }))
+          // .once('sending', () => {
+          //   dispatch(updateBridgeLoading({ visible: true, status: 0 }))
+          // })
+          .once('confirmation', (confirmations: number) => {
+            setCheckList((list) => {
+              return { ...list, approve: true }
+            })
             notification.success({ message: i18next.t(`App Tips`), description: i18next.t(`Approved Success`) })
-          }
-        })
-        .on('error', () => {
-          dispatch(updateBridgeLoading({ visible: false, status: 0 }))
-        })
+          })
+          .on('error', () => {
+            notification.success({ message: i18next.t(`App Tips`), description: i18next.t(`Approved Failed`) })
+          })
+      } finally {
+        setApproveLoading(() => false)
+      }
     }
   }
 
@@ -817,6 +808,7 @@ const BridgeTransferPage: React.FunctionComponent<BridgeTransferPageProps> = () 
         <TransferButton
           pairId={currentPairId}
           checkList={checkList}
+          approveLoading={approveLoading}
           applyApprove={applyApprove}
           generateOrder={generateOrder}
           amount={amount}

@@ -19,12 +19,13 @@ export interface TransferButtonProps {
   pairId: number
   amount: string
   bridgeStatus: string
+  approveLoading: boolean
 }
 
 const TransferButtonWrap = styled.div`
   margin-top: 20px;
 `
-export const BaseButton = styled.div`
+export const BaseButton = styled.div<{ loading?: boolean }>`
   height: 48px;
   background: ${theme.colors.bridgePrimay};
   border-radius: 4px;
@@ -34,7 +35,13 @@ export const BaseButton = styled.div`
   color: #fff;
   cursor: pointer;
   user-select: none;
-  letter-space: 1px;
+  letter-spacing: 1px;
+  pointer-events: ${({ loading }) => {
+    if (loading) {
+      return 'none'
+    }
+    return ''
+  }};
 `
 const HistoryText = styled.div`
   margin-top: 10px;
@@ -62,7 +69,8 @@ const TransferButton: React.FunctionComponent<TransferButtonProps> = ({
   checkList,
   pairId,
   amount,
-  bridgeStatus
+  bridgeStatus,
+  approveLoading
 }) => {
   const { t } = useTranslation()
   const { account } = useWeb3React()
@@ -163,7 +171,10 @@ const TransferButton: React.FunctionComponent<TransferButtonProps> = ({
       if (!checkList.approve && amount !== '') {
         return (
           <TransferButtonWrap>
-            <BaseButton onClick={applyApprove}>{t(`Approved`)}</BaseButton>
+            <BaseButton loading={approveLoading} onClick={applyApprove}>
+              {t(`Approved`)}
+              {approveLoading ? '...' : ''}{' '}
+            </BaseButton>
             <HistoryText onClick={() => history.push('/bridge/list')}>{t(`Transaction History`)}</HistoryText>
           </TransferButtonWrap>
         )
