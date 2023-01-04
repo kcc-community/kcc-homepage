@@ -2,6 +2,7 @@ export const MAIN_NETWORKS = {
   0: {
     name: 'No Available Network',
     fullName: 'No Available Network',
+    chainName: '',
     abbr: '',
     rpc: '',
     chain_id: 0,
@@ -16,6 +17,7 @@ export const MAIN_NETWORKS = {
     name: 'Ethereum',
     fullName: 'Ethereum Network',
     abbr: 'ETH',
+    chainName: 'eth',
     rpc: 'https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
     chain_id: 1,
     decimals: 18,
@@ -30,6 +32,7 @@ export const MAIN_NETWORKS = {
     name: 'KCC-MAINNET',
     fullName: 'KCC Mainnet Network',
     abbr: 'KCC',
+    chainName: 'kcc',
     rpc: 'https://rpc-mainnet.kcc.network',
     chain_id: 321,
     decimals: 18,
@@ -43,6 +46,7 @@ export const MAIN_NETWORKS = {
     name: 'BSC Mainnet',
     fullName: 'BSC Mainnet Network',
     abbr: 'BSC',
+    chainName: 'bsc',
     rpc: 'https://bsc-dataseed1.ninicoin.io',
     chain_id: 56,
     decimals: 18,
@@ -56,6 +60,7 @@ export const MAIN_NETWORKS = {
     name: 'Polygon',
     fullName: 'Polygon Mainnet Network',
     abbr: 'Polygon',
+    chainName: 'polygon',
     rpc: 'https://polygon-rpc.com',
     chain_id: 137,
     decimals: 18,
@@ -69,6 +74,7 @@ export const MAIN_NETWORKS = {
     name: 'Avalanche Mainnet',
     fullName: 'Avalanche Mainnet Network',
     abbr: 'Avalanche',
+    chainName: 'avalanche',
     rpc: 'https://api.avax.network/ext/bc/C/rpc',
     chain_id: 43114,
     decimals: 18,
@@ -82,6 +88,7 @@ export const MAIN_NETWORKS = {
     name: 'Fantom Opera',
     fullName: 'Fantom Opera Network',
     abbr: 'Fantom',
+    chainName: 'fantom',
     rpc: 'https://rpc.ftm.tools',
     chain_id: 250,
     decimals: 18,
@@ -97,6 +104,7 @@ export const TEST_NETWORKS = {
   0: {
     name: 'No Available Network',
     fullName: 'No Available Network',
+    chainName: '',
     abbr: '',
     rpc: '',
     chain_id: 0,
@@ -110,6 +118,7 @@ export const TEST_NETWORKS = {
   4: {
     name: 'Rinkeby',
     abbr: 'Rinkeby',
+    chainName: 'eth',
     fullName: 'Rinkeby Network',
     rpc: 'https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
     chain_id: 4,
@@ -125,6 +134,7 @@ export const TEST_NETWORKS = {
     name: 'KCC-TEST',
     fullName: 'KCC Test Network',
     abbr: 'KCC-TEST',
+    chainName: 'kcc',
     rpc: 'https://rpc-testnet.kcc.network',
     chain_id: 322,
     decimals: 18,
@@ -138,6 +148,7 @@ export const TEST_NETWORKS = {
     name: 'BSC Testnet',
     fullName: 'BSC Testnet Network',
     abbr: 'BSC-TEST',
+    chainName: 'bsc',
     rpc: 'https://data-seed-prebsc-1-s1.binance.org:8545',
     chain_id: 97,
     decimals: 18,
@@ -151,6 +162,7 @@ export const TEST_NETWORKS = {
     name: 'Avalanche Testnet',
     fullName: 'Avalanche Testnet Network',
     abbr: 'Avalanche-TEST',
+    chainName: 'avalanche',
     rpc: 'https://api.avax-test.network/ext/bc/C/rpc',
     chain_id: 43113,
     decimals: 18,
@@ -164,6 +176,7 @@ export const TEST_NETWORKS = {
     name: 'Polygon Testnet',
     fullName: 'Polygon Testnet Network',
     abbr: 'Polygon-TEST',
+    chainName: 'polygon',
     rpc: 'https://matic-mumbai.chainstacklabs.com',
     chain_id: 80001,
     decimals: 18,
@@ -177,6 +190,7 @@ export const TEST_NETWORKS = {
     name: 'Fantom Testnet',
     fullName: 'Fantom Testnet Network',
     abbr: 'Fantom-TEST',
+    chainName: 'fantom',
     rpc: 'https://rpc.testnet.fantom.network',
     chain_id: 4002,
     decimals: 18,
@@ -196,6 +210,7 @@ export interface NetworkType {
   name: string
   rpc: string
   fullName: string
+  chainName: string
   chain_id: number
   symbol: string
   browser: string

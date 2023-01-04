@@ -9,6 +9,7 @@ import { ListType } from '../pages/bridge/transfer'
 import { BridgeService } from '../api/bridge'
 import { usePariList } from '../state/bridge/hooks'
 import { WalletList } from '../constants/wallet'
+import find from 'lodash/find'
 
 const { utils } = new web3()
 
@@ -16,6 +17,12 @@ export const web3Utils = utils
 
 export function getNetworkInfo(networkId: ChainId): NetworkType {
   return networks[networkId]
+}
+
+export function getNetworkInfoByName(chainName: string): NetworkType | undefined {
+  const target = find(networks, { chainName: chainName.toLowerCase() })
+  console.log('target', target)
+  return target
 }
 
 export function getPairInfo(pairId: number): PairInfo | undefined {

@@ -17,7 +17,6 @@ const Grants = lazy(() => import(/* webpackChunkName:'Grant' */ './pages/grants/
 const Activity = lazy(() => import(/* webpackChunkName:'Activity' */ './pages/activities/index'))
 const Bridge = lazy(() => import(/* webpackChunkName:'Bridge' */ './pages/bridge/index'))
 const Ambassador = lazy(() => import(/* webpackChunkName:'Ambassador' */ './pages/ambassador/index'))
-const Unicorn = lazy(() => import(/* webpackChunkName:'Unicorn' */ './pages/uniccorn/index'))
 
 function RouteWithSubRoutes(route: { path: string; component: any; routes: any }) {
   return (
@@ -79,7 +78,6 @@ export default function App() {
             <Route path="/community/activity" exact={true} component={Activity} />
             <Route path="/proof-of-assets" exact={true} component={Proof} />
             <Route path="/ambassador" exact={true} component={Ambassador} />
-            <Route path="/unicorn" exact={true} component={Unicorn} />
             {routes.map((route, i) => (
               <RouteWithSubRoutes key={i} {...route} />
             ))}

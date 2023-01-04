@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom'
 import { CenterRow } from '../../components/Row'
 import { RightOutlined } from '@ant-design/icons'
 import { Pagination, Spin } from 'antd'
-import { getNetworkInfo, getPairInfo } from '../../utils'
+import { getNetworkInfo, getNetworkInfoByName, getPairInfo } from '../../utils'
 import { PairInfo } from '../../state/bridge/reducer'
 import { useTranslation } from 'react-i18next'
 import BN from 'bignumber.js'
@@ -357,7 +357,6 @@ const BridgeListPage: React.FunctionComponent<BridgeListPageProps> = () => {
 
   const nav2detail = (transaction: History) => {
     const orderRaw = JSON.stringify(transaction)
-    console.log('transaction', transaction)
     const order = Base64.encode(orderRaw) as any
     localStorage.setItem('DETAIL_ORDER', order)
     localStorage.setItem('DETAIL_CURRENTPAGE', `${currentPage}`)
@@ -365,16 +364,17 @@ const BridgeListPage: React.FunctionComponent<BridgeListPageProps> = () => {
   }
 
   const list = historyList.map((transaction, index) => {
-    console.log('transaction', transaction)
-
     const no = (currentPage - 1) * 4 + index + 1
 
-    let selectedPairInfo, srcNetworkInfo, distNetworkInfo
+    let selectedPairInfo, srcNetworkInfo, distNetworkInfo, srcNetworkInfo1, distNetworkInfo1
 
     if (transaction.id) {
       selectedPairInfo = getPairInfo(transaction.pairId) as PairInfo
       srcNetworkInfo = getNetworkInfo(selectedPairInfo?.srcChainInfo?.chainId)
       distNetworkInfo = getNetworkInfo(selectedPairInfo?.dstChainInfo?.chainId)
+
+      srcNetworkInfo1 = getNetworkInfoByName(transaction.srcChain)
+      distNetworkInfo1 = getNetworkInfoByName(transaction.dstChain)
     } else {
       selectedPairInfo = getPairInfo(transaction.pairId) as PairInfo
       srcNetworkInfo = getNetworkInfo(transaction.srcId)
@@ -392,11 +392,11 @@ const BridgeListPage: React.FunctionComponent<BridgeListPageProps> = () => {
       <Order onClick={nav2detail.bind(null, transaction)} key={no}>
         <CenterRow>
           <Number>{no < 10 ? `0${no}` : `${no}`}</Number>
-          <NetworkIcon src={srcNetworkInfo.logo} />
-          <NetworkName>{srcNetworkInfo.fullName}</NetworkName>
+          <NetworkIcon src={srcNetworkInfo?.logo ?? srcNetworkInfo1?.logo} />
+          <NetworkName>{srcNetworkInfo?.fullName ?? srcNetworkInfo1?.fullName}</NetworkName>
           <NetWorkDirectionIcon src={DirectionIcon} />
-          <NetworkIcon src={distNetworkInfo.logo} />
-          <NetworkName>{distNetworkInfo.fullName}</NetworkName>
+          <NetworkIcon src={distNetworkInfo?.logo ?? distNetworkInfo1?.logo} />
+          <NetworkName>{distNetworkInfo?.fullName ?? distNetworkInfo1?.fullName}</NetworkName>
         </CenterRow>
         <OrderDetailWrap>
           <Left>
@@ -412,7 +412,7 @@ const BridgeListPage: React.FunctionComponent<BridgeListPageProps> = () => {
             <OrderDetailItem>
               <Title>{t(`Transfer fee`)}:</Title>
               <Content style={{ color: '#999', fontWeight: 300 }}>
-                {new BN(transaction.srcFee).toNumber()} {srcNetworkInfo.symbol.toUpperCase()}
+                {new BN(transaction.srcFee).toNumber()} {srcNetworkInfo?.symbol.toUpperCase()}
               </Content>
             </OrderDetailItem>
           </Left>
